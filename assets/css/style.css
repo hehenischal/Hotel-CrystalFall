@@ -93,6 +93,11 @@ align-items: center;
 justify-content: space-between;
 }
 
+.white-placeholder::placeholder {
+color: #fff;
+opacity: 1;
+}
+
 
 .text-small {
 font-size: 0.875rem;
@@ -165,3 +170,5 @@ transition: all 0.3s ease;
 padding: 2.5rem 0;
 }
 }
+
+
