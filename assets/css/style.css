@@ -1,0 +1,167 @@
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+}
+
+img,
+video {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+.hidden {
+display: none;
+}
+
+
+.bg-nero {
+background-color: #202020;
+}
+
+.bg-nero-dark {
+background-color: #1e1e1e;
+}
+
+.bg-light-gray {
+background-color: #e9e9e9;
+}
+
+.bg-lion {
+background-color: #aa8453;
+}
+
+.text-lion {
+color: #aa8453;
+}
+
+.text-coyote {
+color: #80633e;
+}
+
+.overlay-dark-70 {
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay-dark-50 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-white-30 {
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+.overlay-white-70 {
+background-color: rgba(255, 255, 255, 0.7);
+}
+
+.section-padding {
+padding: 4rem 0;
+}
+
+.container-custom {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem;
+}
+
+.center-text {
+text-align: center;
+}
+
+.flex-center {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.flex-between {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+
+.text-small {
+font-size: 0.875rem;
+}
+
+.text-large {
+font-size: 1.25rem;
+}
+
+.uppercase {
+text-transform: uppercase;
+}
+
+.letter-spacing-wide {
+letter-spacing: 0.1em;
+}
+
+.font-light {
+font-weight: 300;
+}
+
+.font-medium {
+font-weight: 500;
+}
+
+.font-semibold {
+font-weight: 600;
+}
+
+
+.blog-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+transform: translateY(-12px);
+}
+
+
+.btn-lion {
+background-color: #aa8453;
+color: #fff;
+padding: 0.75rem 1.5rem;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+border: none;
+transition: 0.3s ease;
+}
+
+.btn-lion:hover {
+background-color: #8f6f45;
+}
+
+.shadow-soft {
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.object-cover {
+object-fit: cover;
+}
+
+.transition-smooth {
+transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+.section-padding {
+padding: 2.5rem 0;
+}
+}
