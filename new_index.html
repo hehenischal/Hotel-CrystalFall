@@ -181,127 +181,284 @@
 
    <div class="container-fluid mt-3 slide-up px-0 booking-form                            ">
 
-    <form
-        class="bg-white w-100 m-0 booking-form"
-        action="https://www.booking.com/hotel/np/crystal-fall-pokhara2.html"
-        method="GET">
+   <form class="bg-white w-100 m-0 booking-form p-2 p-lg-3">
 
-  <div class="row " style="font-family:'Barlow', sans-serif;">
-<!-- Mobile -->
-<div class="col-12 d-sm-none">
-  <div class="row g-3">
+  <div class="row g-2 align-items-end" style="font-family:'Barlow', sans-serif;">
 
-    <div class="col-6 ">
-      <div class="d-flex align-items-center justify-content-between border  h-100 booking-control">
-        <input
-          type="date"
-          name="checkin"
-          id="checkin"
-          class="form-control border-0 p-0 w-100"
-          style="font-size:.875rem; box-shadow:none;"
-        >
-        <span role="button" onclick="openCheckinCalendar()">
-          <img src="./assets/images/calendar.svg" style="width:20px; height:20px;">
-        </span>
+    <!-- Mobile -->
+    <div class="col-12 d-sm-none">
+      <div class="row g-2">
+
+        <div class="col-6">
+          <div class="d-flex align-items-center justify-content-between border h-100 booking-control px-3">
+            <input
+              type="date"
+              id="checkin"
+              class="form-control border-0 p-0 w-100"
+              style="font-size:.875rem; box-shadow:none;"
+            >
+            <span>
+              <img src="./assets/images/calendar.svg" style="width:20px; height:20px;" alt="">
+            </span>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="d-flex align-items-center justify-content-between border rounded px-3 booking-control">
+            <input
+              type="date"
+              id="checkout"
+              class="form-control border-0 p-0 w-100"
+              style="font-size:.875rem; box-shadow:none;"
+            >
+            <span>
+              <img src="./assets/images/calendar.svg" style="width:20px; height:20px;" alt="">
+            </span>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <select id="adultMobile" class="form-select w-100 h-100 booking-control">
+            <option value="1">1 Adult</option>
+            <option value="2" selected>2 Adults</option>
+            <option value="3">3 Adults</option>
+            <option value="4">4 Adults</option>
+          </select>
+        </div>
+
+        <div class="col-6">
+          <select id="childrenMobile" class="form-select w-100 h-100 booking-control">
+            <option value="0" selected>0 Children</option>
+            <option value="1">1 Child</option>
+            <option value="2">2 Children</option>
+            <option value="3">3 Children</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <select id="roomMobile" class="form-select w-100 h-100 booking-control">
+            <option value="5000" data-room="Executive Suite">Executive Suite</option>
+            <option value="6000" data-room="Premium Garden Suite">Premium Garden Suite</option>
+            <option value="8000" data-room="Deluxe Mountain View">Deluxe Mountain View</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <button
+            type="button"
+            id="checkBtnMobile"
+            class="btn w-100 text-uppercase text-white fw-semibold d-flex align-items-center justify-content-center"
+            style="background-color:#c19a6b; letter-spacing:2px; height:52px;"
+          >
+            Check Now
+          </button>
+        </div>
+
       </div>
     </div>
 
-    <div class="col-6">
-      <div class="d-flex align-items-center justify-content-between border rounded px-3 booking-control">
-        <input
-          type="date"
-          name="checkout"
-          id="checkout"
-          class="form-control border-0 p-0 w-100"
-          style="font-size:.875rem; box-shadow:none;"
-        >
-        <span role="button" onclick="openCheckoutCalendar()">
-          <img src="./assets/images/calendar.svg" style="width:20px; height:20px;">
-        </span>
+    <!-- Desktop -->
+    <div class="col-sm-6 col-lg-2 d-none d-sm-block">
+      <input
+        type="date"
+        id="checkinDesktop"
+        class="form-control w-100 h-100 booking-control"
+      >
+    </div>
+
+    <div class="col-sm-6 col-lg-2 d-none d-sm-block">
+      <input
+        type="date"
+        id="checkoutDesktop"
+        class="form-control w-100 h-100 booking-control"
+      >
+    </div>
+
+    <div class="col-sm-6 col-lg-2 d-none d-sm-block">
+      <select id="adultDesktop" class="form-select w-100 h-100 booking-control">
+        <option value="1">1 Adult</option>
+        <option value="2" selected>2 Adults</option>
+        <option value="3">3 Adults</option>
+        <option value="4">4 Adults</option>
+      </select>
+    </div>
+
+    <div class="col-sm-6 col-lg-2 d-none d-sm-block">
+      <select id="childrenDesktop" class="form-select w-100 h-100 booking-control">
+        <option value="0" selected>0 Children</option>
+        <option value="1">1 Child</option>
+        <option value="2">2 Children</option>
+        <option value="3">3 Children</option>
+      </select>
+    </div>
+
+    <div class="col-sm-6 col-lg-2 d-none d-sm-block">
+      <select id="roomDesktop" class="form-select w-100 h-100 booking-control">
+        <option value="5000" data-room="Executive Suite">Executive Suite</option>
+        <option value="6000" data-room="Premium Garden Suite">Premium Garden Suite</option>
+        <option value="8000" data-room="Deluxe Mountain View">Deluxe Mountain View</option>
+      </select>
+    </div>
+
+    <div class="col-sm-6 col-lg-2 d-none d-sm-block">
+      <button
+        type="button"
+        id="checkBtnDesktop"
+        class="btn w-100 text-uppercase text-white fw-semibold d-flex align-items-center justify-content-center"
+        style="background-color:#c19a6b; letter-spacing:2px; height:52px;"
+      >
+        Check Now
+      </button>
+    </div>
+
+    <div id="availabilityResult" class="col-12 mt-2 d-none">
+      <div class="row g-3">
+
+        <div class="col-12 col-lg-7">
+          <div class="border rounded p-2 p-md-3 h-100 bg-white">
+            <div class="d-flex flex-column flex-md-row gap-3">
+              <img
+                id="roomImage"
+                src="./assets/images/wlc2.png"
+                alt="Room"
+                style="width:100%; max-width:220px; height:160px; object-fit:cover; border-radius:10px;"
+              >
+
+              <div>
+                <h4 id="roomName" style="font-family:'Gilda Display', serif; color:#111; margin-bottom:6px;">
+                  Executive Suite
+                </h4>
+
+                <p style="font-size:.9rem; color:#6b7280; margin-bottom:8px;">
+                  Available for your selected dates
+                </p>
+
+                <div style="font-size:.9rem; color:#374151;">
+                  <div>1 King Bed</div>
+                  <div>Private Bathroom</div>
+                  <div>Balcony View</div>
+                  <div>Max 2 Guests</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <div class="border rounded p-2 p-md-3 h-100" style="background:#fcfaf7;">
+            <h5 style="font-family:'Gilda Display', serif; color:#111;">Price Summary</h5>
+
+            <div class="d-flex justify-content-between mb-1">
+              <span>Price per night</span>
+              <span id="priceNight">NPR 5000</span>
+            </div>
+
+            <div class="d-flex justify-content-between mb-1">
+              <span>Nights</span>
+              <span id="nightCount">1</span>
+            </div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between fw-semibold">
+              <span>Total</span>
+              <span id="totalAmount">NPR 5000</span>
+            </div>
+
+            <button
+              type="button"
+              id="reserveBtn"
+              class="btn btn-dark w-100 mt-2"
+              style="letter-spacing:2px; height:46px;"
+            >
+              Reserve Now
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
 
   </div>
-</div>
-
-<!-- Desktop -->
-<div class="col-sm-6 col-lg-2 d-none d-sm-block ">
-  <input
-    type="date"
-    name="checkin"
-    id="checkinDesktop"
-    class="form-control w-100  h-100 booking-control"
-  >
-</div>
-
-<div class="col-sm-6 col-lg-2 d-none  d-sm-block">
-  <input
-    type="date"
-    name="checkout"
-    id="checkoutDesktop"
-    class="form-control w-100   h-100  booking-control"
-  >
-</div>
-
-<div class="col-sm-6 col-lg-2 d-none  d-sm-block">
-  <select class="form-select w-100  h-100 booking-control">
-    <option disabled selected>adult</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-  </select>
-</div>
-
-<div class="col-sm-6 col-lg-2 ">
-  <select class="form-select w-100 h-100 booking-control">
-    <option disabled selected>children</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-  </select>
-</div>
-
-<div class="col-sm-6 col-lg-2 ">
-  <select class="form-select w-100 h-100   h-100  booking-control">
-    <option disabled selected>Room</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-  </select>
-</div>
-
-<div  class="col-sm-6 col-lg-2">
- <button
-type="submit"
-class="btn w-100 text-uppercase text-white fw-semibold"
-style="background-color:#c19a6b; letter-spacing:2px; height:70px;">
-Check Now
-</button>
-</div>
 </form>
 
     </div>
 
   </div>
 <script>
-  const homeSwiper = new Swiper(".homeSwiper", {
-    loop:true,
-    speed:900,
-    effect:"fade",
-    fadeEffect:{crossFade:true},
-    autoplay:{delay:3500, disableOnInteraction:false},
-    pagination:{el:".homeSwiper .swiper-pagination", clickable:true},
-    navigation:{
-      nextEl:".homeSwiper .swiper-button-next",
-      prevEl:".homeSwiper .swiper-button-prev"
+  const rooms = {
+    "Executive Suite": {
+      price: 5000,
+      image: "./assets/images/wlc2.png"
+    },
+    "Premium Garden Suite": {
+      price: 6000,
+      image: "./assets/images/wlc5.png"
+    },
+    "Deluxe Mountain View": {
+      price: 8000,
+      image: "./assets/images/bed.jpg"
     }
-  });
+  };
 
-  document.addEventListener("DOMContentLoaded", function(){
-    const elements=document.querySelectorAll(".slide-up");
-    elements.forEach((el,i)=>{
-      setTimeout(()=>el.classList.add("show"),150*i);
-    });
+  function getBookingValues() {
+    const isMobile = window.innerWidth < 576;
+
+    const checkin = isMobile
+      ? document.getElementById("checkin").value
+      : document.getElementById("checkinDesktop").value;
+
+    const checkout = isMobile
+      ? document.getElementById("checkout").value
+      : document.getElementById("checkoutDesktop").value;
+
+    const roomSelect = isMobile
+      ? document.getElementById("roomMobile")
+      : document.getElementById("roomDesktop");
+
+    const roomName = roomSelect.options[roomSelect.selectedIndex].dataset.room;
+
+    return { checkin, checkout, roomName };
+  }
+
+  function calculateNights(checkin, checkout) {
+    const d1 = new Date(checkin);
+    const d2 = new Date(checkout);
+    return Math.ceil((d2 - d1) / (1000 * 60 * 60 * 24));
+  }
+
+  function updateAvailability() {
+    const { checkin, checkout, roomName } = getBookingValues();
+
+    if (!checkin || !checkout) {
+      alert("Please select check-in and check-out dates.");
+      return;
+    }
+
+    const nights = calculateNights(checkin, checkout);
+
+    if (nights < 1) {
+      alert("Check-out must be after check-in.");
+      return;
+    }
+
+    const room = rooms[roomName];
+    const total = room.price * nights;
+
+    document.getElementById("roomName").innerText = roomName;
+    document.getElementById("roomImage").src = room.image;
+    document.getElementById("priceNight").innerText = "NPR " + room.price.toLocaleString();
+    document.getElementById("nightCount").innerText = nights;
+    document.getElementById("totalAmount").innerText = "NPR " + total.toLocaleString();
+    document.getElementById("availabilityResult").classList.remove("d-none");
+  }
+
+  document.getElementById("checkBtnMobile").addEventListener("click", updateAvailability);
+  document.getElementById("checkBtnDesktop").addEventListener("click", updateAvailability);
+
+  document.getElementById("reserveBtn").addEventListener("click", function () {
+    const bookingId = "HCF" + Math.floor(Math.random() * 9000 + 1000);
+    alert("Reservation received. Booking ID: " + bookingId);
   });
 </script>
 </section>
@@ -559,103 +716,265 @@ document.addEventListener("DOMContentLoaded", function () {
     <h2 class="text-center mb-4 reveal from-up delay-1" style="font-family:'Gilda Display', serif; font-weight:400; letter-spacing:.04em; color:#b48a55; font-size: clamp(1.75rem, 3vw, 2.875rem);">
       The Best <span style="color:#fff;">Prices</span>
     </h2>
+<style>
+.room-card{
+  cursor:pointer;
+}
 
-    <div class="row g-4">
-      <div class="col-12 col-md-4 reveal from-up delay-1 shadow room-card">
-        <div class="position-relative bg-white overflow-hidden shadow" style="border-radius:1rem;">
-          <img src="./assets/images/wlc2.png" alt="Deluxe Mountain View Room" class="w-100" style="height:360px; object-fit:cover;" />
-          <div class="p-4">
-            <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">Executive Suite</h3>
-            <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
-              A refined space featuring premium amenities, lounge access, and thoughtfully designed luxury.
-            </p>
+.room-details{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
 
-            <div class="d-flex align-items-start justify-content-between">
-              <div class="d-flex flex-column">
-                <span style="color:#c79a5b; font-size:1.25rem; font-weight:600;">
-                  NPR 5,000 <span style="font-size:.875rem; color:#9ca3af; font-weight:400;">/ night</span>
-                </span>
-                <span style="font-size:.875rem; color:#9ca3af; margin-top:.25rem;">Taxes and Fees included</span>
-              </div>
+.room-card.open .room-details{
+  max-height:260px;
+}
+</style>
 
-              <a
-                href="#"
-                style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;"
-                onmouseover="this.style.textDecoration='underline'"
-                onmouseout="this.style.textDecoration='none'"
-                onclick="openBooking()"
-              >
-                Reserve Now
-              </a>
+<div class="row g-4">
+
+  <!-- Executive Suite -->
+  <div class="col-12 col-md-4 reveal from-up delay-1 shadow room-card" onclick="toggleRoom(this)">
+    <div class="position-relative bg-white overflow-hidden shadow" style="border-radius:1rem;">
+      <img
+        src="./assets/images/wlc2.png"
+        alt="Executive Suite"
+        class="w-100"
+        style="height:360px; object-fit:cover;"
+      />
+
+      <div class="p-4">
+        <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
+          Executive Suite
+        </h3>
+
+        <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
+          A refined space featuring premium amenities, lounge access, and thoughtfully designed luxury.
+        </p>
+
+        <div class="room-details">
+          <div class="row g-2 mb-3" style="font-size:.8rem; color:#374151;">
+            <div class="col-6">
+              <strong>Room Size</strong><br>
+              32 m²
+            </div>
+
+            <div class="col-6">
+              <strong>Bed</strong><br>
+              King Bed
+            </div>
+
+            <div class="col-6">
+              <strong>Occupancy</strong><br>
+              2 Adults
+            </div>
+
+            <div class="col-6">
+              <strong>Bathroom</strong><br>
+              Private Bathroom
+            </div>
+
+            <div class="col-6">
+              <strong>Extra Bed</strong><br>
+              Available
+            </div>
+
+            <div class="col-6">
+              <strong>Extra Bed Cost</strong><br>
+              NPR 1000
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-12 col-md-4 reveal from-up delay-2">
-        <div class="position-relative bg-white overflow-hiddenshadow room-card" style="border-radius:1rem;">
-          <img src="./assets/images/wlc5.png" alt="Premium Garden Suite" class="w-100" style="height:360px; object-fit:cover;" />
-          <div class="p-4">
-            <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">Premium Garden Suite</h3>
-            <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
-              Elegant interiors paired with lush garden surroundings, perfect for a quiet and relaxing stay.
-            </p>
+        <div class="d-flex align-items-start justify-content-between">
+          <div class="d-flex flex-column">
+            <span style="color:#c79a5b; font-size:1.25rem; font-weight:600;">
+              NPR 5,000 <span style="font-size:.875rem; color:#9ca3af; font-weight:400;">/ night</span>
+            </span>
 
-            <div class="d-flex align-items-start justify-content-between">
-              <div class="d-flex flex-column">
-                <span style="color:#c79a5b; font-size:1.25rem; font-weight:600;">
-                  NPR 6,000 <span style="font-size:.875rem; color:#9ca3af; font-weight:400;">/ night</span>
-                </span>
-                <span style="font-size:.875rem; color:#9ca3af; margin-top:.25rem;">Taxes and Fees included</span>
-              </div>
-
-              <a
-                href="#"
-                style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;"
-                onmouseover="this.style.textDecoration='underline'"
-                onmouseout="this.style.textDecoration='none'"
-                onclick="openBooking()"
-              >
-                Reserve Now
-              </a>
-            </div>
+            <span style="font-size:.875rem; color:#9ca3af; margin-top:.25rem;">
+              Taxes and Fees included
+            </span>
           </div>
-        </div>
-      </div>
 
-      <div class="col-12 col-md-4 reveal from-up delay-3">
-        <div class="position-relative bg-white overflow-hidden  shadow room-card" style="border-radius:1rem;">
-          <img src="./assets/images/bed.jpg" alt="Executive Suite" class="w-100" style="height:360px; object-fit:cover;" />
-          <div class="p-4">
-            <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">Deluxe Mountain View</h3>
-            <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
-              Wake up to panoramic Himalayan views from your private balcony, designed for comfort and calm.
-            </p>
-
-            <div class="d-flex align-items-start justify-content-between ">
-              <div class="d-flex flex-column ">
-                <span style="color:#c79a5b; font-size:1.25rem; font-weight:600;">
-                  NPR 8,000 <span style="font-size:.875rem; color:#9ca3af; font-weight:400;">/ night</span>
-                </span>
-                <span style="font-size:.875rem; color:#9ca3af; margin-top:.25rem;">Taxes and Fees included</span>
-              </div>
-
-              <a
-                href="#"
-                style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;"
-                onmouseover="this.style.textDecoration='underline'"
-                onmouseout="this.style.textDecoration='none'"
-                onclick="openBooking()"
-              >
-                Reserve Now
-              </a>
-            </div>
-          </div>
+          <a
+            href="#"
+            style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;"
+            onmouseover="this.style.textDecoration='underline'"
+            onmouseout="this.style.textDecoration='none'"
+            onclick="event.stopPropagation(); openBooking();"
+          >
+            Reserve Now
+          </a>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Premium Garden Suite -->
+  <div class="col-12 col-md-4 reveal from-up delay-2 shadow room-card" onclick="toggleRoom(this)">
+    <div class="position-relative bg-white overflow-hidden shadow room-card" style="border-radius:1rem;">
+      <img
+        src="./assets/images/wlc5.png"
+        alt="Premium Garden Suite"
+        class="w-100"
+        style="height:360px; object-fit:cover;"
+      />
+
+      <div class="p-4">
+        <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
+          Premium Garden Suite
+        </h3>
+
+        <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
+          Elegant interiors paired with lush garden surroundings, perfect for a quiet and relaxing stay.
+        </p>
+
+        <div class="room-details">
+          <div class="row g-2 mb-3" style="font-size:.8rem; color:#374151;">
+            <div class="col-6">
+              <strong>Room Size</strong><br>
+              36 m²
+            </div>
+
+            <div class="col-6">
+              <strong>Bed</strong><br>
+              King Bed
+            </div>
+
+            <div class="col-6">
+              <strong>Occupancy</strong><br>
+              2 Adults + 1 Child
+            </div>
+
+            <div class="col-6">
+              <strong>Bathroom</strong><br>
+              Private Bathtub
+            </div>
+
+            <div class="col-6">
+              <strong>Extra Bed</strong><br>
+              Available
+            </div>
+
+            <div class="col-6">
+              <strong>Extra Bed Cost</strong><br>
+              NPR 1200
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start justify-content-between">
+          <div class="d-flex flex-column">
+            <span style="color:#c79a5b; font-size:1.25rem; font-weight:600;">
+              NPR 6,000 <span style="font-size:.875rem; color:#9ca3af; font-weight:400;">/ night</span>
+            </span>
+
+            <span style="font-size:.875rem; color:#9ca3af; margin-top:.25rem;">
+              Taxes and Fees included
+            </span>
+          </div>
+
+          <a
+            href="#"
+            style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;"
+            onmouseover="this.style.textDecoration='underline'"
+            onmouseout="this.style.textDecoration='none'"
+            onclick="event.stopPropagation(); openBooking();"
+          >
+            Reserve Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deluxe Mountain View -->
+  <div class="col-12 col-md-4 reveal from-up delay-3 shadow room-card" onclick="toggleRoom(this)">
+    <div class="position-relative bg-white overflow-hidden shadow room-card" style="border-radius:1rem;">
+      <img
+        src="./assets/images/bed.jpg"
+        alt="Deluxe Mountain View"
+        class="w-100"
+        style="height:360px; object-fit:cover;"
+      />
+
+      <div class="p-4">
+        <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
+          Deluxe Mountain View
+        </h3>
+
+        <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
+          Wake up to panoramic Himalayan views from your private balcony, designed for comfort and calm.
+        </p>
+
+        <div class="room-details">
+          <div class="row g-2 mb-3" style="font-size:.8rem; color:#374151;">
+            <div class="col-6">
+              <strong>Room Size</strong><br>
+              28 m²
+            </div>
+
+            <div class="col-6">
+              <strong>Bed</strong><br>
+              Queen Bed
+            </div>
+
+            <div class="col-6">
+              <strong>Occupancy</strong><br>
+              2 Adults
+            </div>
+
+            <div class="col-6">
+              <strong>Bathroom</strong><br>
+              Private Shower
+            </div>
+
+            <div class="col-6">
+              <strong>Extra Bed</strong><br>
+              Not Available
+            </div>
+
+            <div class="col-6">
+              <strong>Balcony</strong><br>
+              Mountain View
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start justify-content-between">
+          <div class="d-flex flex-column">
+            <span style="color:#c79a5b; font-size:1.25rem; font-weight:600;">
+              NPR 8,000 <span style="font-size:.875rem; color:#9ca3af; font-weight:400;">/ night</span>
+            </span>
+
+            <span style="font-size:.875rem; color:#9ca3af; margin-top:.25rem;">
+              Taxes and Fees included
+            </span>
+          </div>
+
+          <a
+            href="#"
+            style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;"
+            onmouseover="this.style.textDecoration='underline'"
+            onmouseout="this.style.textDecoration='none'"
+            onclick="event.stopPropagation(); openBooking();"
+          >
+            Reserve Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleRoom(card){
+  card.classList.toggle("open");
+}
+</script>
   <script>
     function openBooking() {
       const checkin =
@@ -814,7 +1133,18 @@ document.addEventListener("DOMContentLoaded", function () {
     </form>
   </div>
 </section>
+
 <section id="events" class="py-5 px-3 bg-nero reveal from-up">
+
+  <style>
+    @media (max-width: 576px) {
+      #events .room-card { height: 360px !important; }
+      #events .p-4 { padding: 16px !important; }
+    }
+    @media (max-width: 992px) {
+      #events .room-card { height: 420px !important; }
+    }
+  </style>
 
   <div class="container" style="max-width:1200px;">
 
@@ -829,21 +1159,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="row g-4">
 
+      <!-- Card 1 -->
       <div class="col-12 col-md-6 col-lg-4 reveal from-up delay-1">
         <div
           class="position-relative overflow-hidden shadow room-card"
           style="height:450px; border-radius:.5rem; cursor:pointer; transition: transform .3s ease;"
           onmouseover="this.style.transform='scale(1.05)';"
           onmouseout="this.style.transform='scale(1)';"
-         onclick="document.getElementById('event-modal-1').classList.remove('d-none')"
+          onclick="openEventModal('event-modal-1')"
         >
-          <img src="./assets/images/events-1.png"
-               class="w-100 h-100"
-               style="object-fit:cover;"
-          />
+          <img src="./assets/images/events-1.png" class="w-100 h-100" style="object-fit:cover;" alt="Lakeside Acoustic Evenings"/>
 
-          <div class="position-absolute start-0 end-0 bottom-0 p-4 text-white"
-               style="background:rgba(0,0,0,.6);">
+          <div class="position-absolute start-0 end-0 bottom-0 p-4 text-white" style="background:rgba(0,0,0,.6);">
             <h3 class="text-uppercase mb-1"
                 style="font-family:'Gilda Display', serif; font-size:1.25rem; letter-spacing:.04em;">
               Lakeside Acoustic Evenings
@@ -853,25 +1180,29 @@ document.addEventListener("DOMContentLoaded", function () {
               Every Friday -
               <time style="font-weight:300;">6:30 PM – 8:30 PM</time>
             </p>
+
+            <div class="mt-2" style="font-family:'Barlow', sans-serif; font-size:.95rem; color:rgba(255,255,255,.9);">
+              <div>Entry, NPR 500 per person</div>
+              <div>Reservation, recommended before 4 PM</div>
+              <div>Capacity, 40 seats</div>
+              <div>Includes, live music, welcome drink</div>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Card 2 -->
       <div class="col-12 col-md-6 col-lg-4 reveal from-up delay-2">
         <div
           class="position-relative overflow-hidden shadow room-card"
           style="height:450px; border-radius:.5rem; cursor:pointer; transition: transform .3s ease;"
           onmouseover="this.style.transform='scale(1.05)';"
           onmouseout="this.style.transform='scale(1)';"
-        onclick="document.getElementById('event-modal-1').classList.remove('d-none')"
+          onclick="openEventModal('event-modal-2')"
         >
-          <img src="./assets/images/events-2.png"
-               class="w-100 h-100"
-               style="object-fit:cover;"
-          />
+          <img src="./assets/images/events-2.png" class="w-100 h-100" style="object-fit:cover;" alt="Full Moon Dinner by the Lake"/>
 
-          <div class="position-absolute start-0 end-0 bottom-0 p-4 text-white"
-               style="background:rgba(0,0,0,.6);">
+          <div class="position-absolute start-0 end-0 bottom-0 p-4 text-white" style="background:rgba(0,0,0,.6);">
             <h3 class="text-uppercase mb-1"
                 style="font-family:'Gilda Display', serif; font-size:1.25rem; letter-spacing:.04em;">
               Full Moon Dinner by the Lake
@@ -881,25 +1212,29 @@ document.addEventListener("DOMContentLoaded", function () {
               Monthly -
               <time style="font-weight:300;">7:00 PM</time>
             </p>
+
+            <div class="mt-2" style="font-family:'Barlow', sans-serif; font-size:.95rem; color:rgba(255,255,255,.9);">
+              <div>Price, NPR 2,500 per person</div>
+              <div>Reservation, required 24 hours before</div>
+              <div>Capacity, 60 guests</div>
+              <div>Includes, dinner set, lake seating</div>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Card 3 -->
       <div class="col-12 col-md-6 col-lg-4 reveal from-up delay-3">
         <div
           class="position-relative overflow-hidden shadow room-card"
           style="height:450px; border-radius:.5rem; cursor:pointer; transition: transform .3s ease;"
           onmouseover="this.style.transform='scale(1.05)';"
           onmouseout="this.style.transform='scale(1)';"
-        onclick="document.getElementById('event-modal-1').classList.remove('d-none')"
+          onclick="openEventModal('event-modal-3')"
         >
-          <img src="./assets/images/events-3.png"
-               class="w-100 h-100"
-               style="object-fit:cover;"
-          />
+          <img src="./assets/images/events-3.png" class="w-100 h-100" style="object-fit:cover;" alt="Annapurna Sunrise Breakfast"/>
 
-          <div class="position-absolute start-0 end-0 bottom-0 p-4 text-white"
-               style="background:rgba(0,0,0,.6);">
+          <div class="position-absolute start-0 end-0 bottom-0 p-4 text-white" style="background:rgba(0,0,0,.6);">
             <h3 class="text-uppercase mb-1"
                 style="font-family:'Gilda Display', serif; font-size:1.25rem; letter-spacing:.04em;">
               Annapurna Sunrise Breakfast
@@ -909,14 +1244,327 @@ document.addEventListener("DOMContentLoaded", function () {
               Every Sunday -
               <time style="font-weight:300;">6:00 AM – 8:30 AM</time>
             </p>
+
+            <div class="mt-2" style="font-family:'Barlow', sans-serif; font-size:.95rem; color:rgba(255,255,255,.9);">
+              <div>Price, NPR 1,200 per person</div>
+              <div>Reservation, walk in allowed, reserve for groups</div>
+              <div>Capacity, 50 seats</div>
+              <div>Includes, breakfast buffet, coffee or tea</div>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
+
   </div>
 </section>
 
+<section class="py-5 px-3 bg-nero reveal from-up" id="offers">
+  <div class="container" style="max-width:1200px;">
+
+    <h2 class="text-center mb-3 reveal from-up delay-1"
+        style="font-family:'Gilda Display', serif; font-weight:400; letter-spacing:.04em; color:#b48a55; font-size: clamp(1.75rem, 3vw, 2.875rem);">
+      Special Offers & Packages
+    </h2>
+
+    <div class="d-flex align-items-center justify-content-center mb-4 reveal from-up delay-2">
+      <img src="./assets/images/decorated-pattern-2.svg" alt="">
+    </div>
+
+    <p class="text-center mx-auto mb-5 reveal from-up delay-3"
+       style="font-family:'Barlow', sans-serif; color:#d1d5db; max-width:700px; font-size:1rem;">
+      Explore curated packages designed for couples, families, and longer stays in beautiful Pokhara.
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-12 col-md-4 reveal from-left delay-4">
+        <div class="position-relative bg-white overflow-hidden shadow h-100" style="border-radius:1rem;">
+          <img src="./assets/images/wlc4.png" alt="Romantic Escape Package" class="w-100" style="height:320px; object-fit:cover;">
+          <div class="p-4">
+            <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
+              Romantic Escape
+            </h3>
+
+            <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
+              Perfect for couples seeking a peaceful getaway with scenic views and added comfort.
+            </p>
+
+            <div class="mb-3" style="font-size:.875rem; color:#374151;">
+              <div>• 2 nights stay</div>
+              <div>• Breakfast included</div>
+              <div>• Candlelight dinner for two</div>
+              <div>• Welcome drink on arrival</div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span style="color:#c79a5b; font-size:1.1rem; font-weight:600;">From NPR 12,500</span>
+              <a href="https://www.booking.com/Share-EfQaODf"
+                 style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-up delay-5">
+        <div class="position-relative bg-white overflow-hidden shadow h-100" style="border-radius:1rem;">
+          <img src="./assets/images/wlc5.png" alt="Family Stay Package" class="w-100" style="height:320px; object-fit:cover;">
+          <div class="p-4">
+            <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
+              Family Stay Package
+            </h3>
+
+            <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
+              A family-friendly offer with added convenience, comfort, and value for longer visits.
+            </p>
+
+            <div class="mb-3" style="font-size:.875rem; color:#374151;">
+              <div>• 3 nights stay</div>
+              <div>• Complimentary breakfast</div>
+              <div>• One extra bed included</div>
+              <div>• Late check-out subject to availability</div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span style="color:#c79a5b; font-size:1.1rem; font-weight:600;">From NPR 17,800</span>
+              <a href="https://www.booking.com/Share-EfQaODf"
+                 style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-right delay-6">
+        <div class="position-relative bg-white overflow-hidden shadow h-100" style="border-radius:1rem;">
+          <img src="./assets/images/bed.jpg" alt="Long Stay Offer" class="w-100" style="height:320px; object-fit:cover;">
+          <div class="p-4">
+            <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
+              Long Stay Offer
+            </h3>
+
+            <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
+              Great value for guests planning an extended stay with flexible comfort and savings.
+            </p>
+
+            <div class="mb-3" style="font-size:.875rem; color:#374151;">
+              <div>• Stay 5 nights or more</div>
+              <div>• Up to 15% off room rate</div>
+              <div>• Complimentary breakfast</div>
+              <div>• Priority room selection</div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span style="color:#c79a5b; font-size:1.1rem; font-weight:600;">Save up to 15%</span>
+              <a href="https://www.booking.com/Share-EfQaODf"
+                 style="font-size:.875rem; text-transform:uppercase; letter-spacing:.12em; color:#c79a5b; font-weight:700; text-decoration:none;">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-5 g-4">
+
+      <div class="col-12 col-md-6 reveal from-left delay-7">
+        <div class="border rounded p-4 h-100" style="border-color:rgba(255,255,255,.15) !important;">
+          <h4 style="font-family:'Gilda Display', serif; color:#fff;">
+            Honeymoon Add-On
+          </h4>
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; margin-bottom:.75rem;">
+            Add floral room decoration, cake, and a private dinner setup for a memorable stay.
+          </p>
+          <span style="font-family:'Barlow', sans-serif; color:#c79a5b;">Starting from NPR 3,500</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 reveal from-right delay-8">
+        <div class="border rounded p-4 h-100" style="border-color:rgba(255,255,255,.15) !important;">
+          <h4 style="font-family:'Gilda Display', serif; color:#fff;">
+            Seasonal Offer
+          </h4>
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; margin-bottom:.75rem;">
+            Limited-time package for selected travel dates with room discounts and breakfast included.
+          </p>
+          <span style="font-family:'Barlow', sans-serif; color:#c79a5b;">Available on selected dates</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Event modal 1 -->
+<div id="event-modal-1" class="d-none" style="position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:9999; display:flex; align-items:center; justify-content:center; padding:16px;">
+  <div class="bg-white rounded p-4" style="max-width:560px; width:100%; font-family:'Barlow', sans-serif; max-height: calc(100vh - 32px); overflow:auto;">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div>
+        <div class="fw-semibold" style="font-size:1.1rem;">Lakeside Acoustic Evenings</div>
+        <div style="color:#6b7280;">Every Friday, 6:30 PM to 8:30 PM</div>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-dark" onclick="closeEventModal('event-modal-1')">Close</button>
+    </div>
+    <div class="mt-3" style="color:#374151;">
+      <div>Entry, NPR 500 per person</div>
+      <div>Capacity, 40 seats</div>
+      <div>Reservation, recommended before 4 PM</div>
+      <div>Includes, live music, welcome drink</div>
+    </div>
+    <button type="button" class="btn btn-dark w-100 mt-3" onclick="openEventForm('Lakeside Acoustic Evenings')">Request a seat</button>
+  </div>
+</div>
+
+<!-- Event modal 2 -->
+<div id="event-modal-2" class="d-none" style="position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:9999; display:flex; align-items:center; justify-content:center; padding:16px;">
+  <div class="bg-white rounded p-4" style="max-width:560px; width:100%; font-family:'Barlow', sans-serif; max-height: calc(100vh - 32px); overflow:auto;">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div>
+        <div class="fw-semibold" style="font-size:1.1rem;">Full Moon Dinner by the Lake</div>
+        <div style="color:#6b7280;">Monthly, 7:00 PM</div>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-dark" onclick="closeEventModal('event-modal-2')">Close</button>
+    </div>
+    <div class="mt-3" style="color:#374151;">
+      <div>Price, NPR 2,500 per person</div>
+      <div>Capacity, 60 guests</div>
+      <div>Reservation, required 24 hours before</div>
+      <div>Includes, dinner set, lake seating</div>
+    </div>
+    <button type="button" class="btn btn-dark w-100 mt-3" onclick="openEventForm('Full Moon Dinner by the Lake')">Request a seat</button>
+  </div>
+</div>
+
+<!-- Event modal 3 -->
+<div id="event-modal-3" class="d-none" style="position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:9999; display:flex; align-items:center; justify-content:center; padding:16px;">
+  <div class="bg-white rounded p-4" style="max-width:560px; width:100%; font-family:'Barlow', sans-serif; max-height: calc(100vh - 32px); overflow:auto;">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div>
+        <div class="fw-semibold" style="font-size:1.1rem;">Annapurna Sunrise Breakfast</div>
+        <div style="color:#6b7280;">Every Sunday, 6:00 AM to 8:30 AM</div>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-dark" onclick="closeEventModal('event-modal-3')">Close</button>
+    </div>
+    <div class="mt-3" style="color:#374151;">
+      <div>Price, NPR 1,200 per person</div>
+      <div>Capacity, 50 seats</div>
+      <div>Reservation, walk in allowed. Reserve for groups.</div>
+      <div>Includes, breakfast buffet, coffee or tea</div>
+    </div>
+    <button type="button" class="btn btn-dark w-100 mt-3" onclick="openEventForm('Annapurna Sunrise Breakfast')">Request a seat</button>
+  </div>
+</div>
+
+<!-- Event inquiry modal -->
+<div id="event-form-modal" class="d-none" style="position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:10000; display:flex; align-items:center; justify-content:center; padding:16px;">
+  <div class="bg-white rounded p-4" style="max-width:520px; width:100%; font-family:'Barlow', sans-serif; max-height: calc(100vh - 32px); overflow:auto;">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div>
+        <div class="fw-semibold" style="font-size:1.1rem;">Event Inquiry</div>
+        <div id="eventSelectedName" style="color:#6b7280; font-size:.95rem;"></div>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-dark" onclick="closeEventForm()">Close</button>
+    </div>
+
+   
+
+    <form class="mt-3" onsubmit="handleEventSubmit(event)">
+      <input id="eventNameInput" type="hidden" />
+
+      <div class="mb-2">
+        <input id="eventFullName" type="text" class="form-control" placeholder="Full name" required>
+      </div>
+      <div class="mb-2">
+        <input id="eventEmail" type="email" class="form-control" placeholder="Email address" required>
+      </div>
+      <div class="mb-2">
+        <input id="eventPhone" type="tel" class="form-control" placeholder="Phone number" required>
+      </div>
+      <div class="mb-2">
+        <input id="eventGuests" type="number" min="1" class="form-control" placeholder="Number of guests" required>
+      </div>
+      <div class="mb-2">
+        <textarea id="eventNote" class="form-control" rows="3" placeholder="Any request"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark w-100 mt-2">Submit request</button>
+
+      <div id="eventSuccessMsg" class="mt-3 d-none" style="color:#16a34a;">
+        Request sent. We will contact you shortly.
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openEventModal(id) {
+    document.getElementById(id).classList.remove("d-none");
+  }
+
+  function closeEventModal(id) {
+    document.getElementById(id).classList.add("d-none");
+  }
+
+  function openEventForm(eventName) {
+    document.getElementById("eventSelectedName").textContent = eventName;
+    document.getElementById("eventNameInput").value = eventName;
+
+    document.getElementById("eventSuccessMsg").classList.add("d-none");
+    document.getElementById("eventFullName").value = "";
+    document.getElementById("eventEmail").value = "";
+    document.getElementById("eventPhone").value = "";
+    document.getElementById("eventGuests").value = "";
+    document.getElementById("eventNote").value = "";
+
+    document.getElementById("event-form-modal").classList.remove("d-none");
+  }
+
+  function closeEventForm() {
+    document.getElementById("event-form-modal").classList.add("d-none");
+    document.getElementById("eventSuccessMsg").classList.add("d-none");
+  }
+
+  function handleEventSubmit(e) {
+    e.preventDefault();
+
+    const payload = {
+      eventName: document.getElementById("eventNameInput").value,
+      fullName: document.getElementById("eventFullName").value.trim(),
+      email: document.getElementById("eventEmail").value.trim(),
+      phone: document.getElementById("eventPhone").value.trim(),
+      guests: Number(document.getElementById("eventGuests").value || 0),
+      note: document.getElementById("eventNote").value.trim(),
+      createdAt: new Date().toISOString()
+    };
+
+    const key = "crystalfall_event_requests";
+    const list = JSON.parse(localStorage.getItem(key) || "[]");
+    list.unshift(payload);
+    localStorage.setItem(key, JSON.stringify(list));
+
+    document.getElementById("eventSuccessMsg").classList.remove("d-none");
+  }
+
+  // Close modal when clicking outside the white box
+  document.addEventListener("click", function(e) {
+    const ids = ["event-modal-1","event-modal-2","event-modal-3","event-form-modal"];
+    ids.forEach(id => {
+      const overlay = document.getElementById(id);
+      if (!overlay || overlay.classList.contains("d-none")) return;
+      if (e.target === overlay) {
+        overlay.classList.add("d-none");
+      }
+    });
+  });
+</script>
+
 
 
 <div id="event-modal-1"
@@ -1018,6 +1666,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </div>
+
 
 <section id="gallery" class="py-5 px-3 bg-nero">
   <div class="container" style="max-width:1200px;">
@@ -1158,102 +1807,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 </style>
 
-
-<section class="py-5 bg-light-gray reveal from-up">
-  <div class="container" style="max-width:1200px;">
-
-    <h2 class="font-gilda fw-medium text-coyote text-center mb-3 reveal from-up delay-1"
-        style="font-size:42px; letter-spacing:.04em;">
-      MENU
-    </h2>
-
-    <div class="d-flex align-items-center justify-content-center mb-4 reveal from-up delay-2">
-      <img src="./assets/images/decorated-pattern-2.svg" alt="">
-    </div>
-
-    <div class="row align-items-center g-5">
-
-      <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start reveal from-left delay-1">
-        <h3 class="text-coyote text-uppercase font-barlow-cond opacity-75"
-            style="letter-spacing:.25em; font-size:22px;">
-          Discover
-        </h3>
-
-        <h1 class="font-gilda text-black py-3 mb-3"
-            style="font-size:38px; letter-spacing:.04em;">
-          Our Menu
-        </h1>
-
-        <p class="font-barlow text-black text-justify mb-0"
-           style="font-size:1.05rem; line-height:1.7;">
-          Indulge in a culinary journey featuring fresh, local ingredients and a variety of international and traditional Nepali dishes. From gourmet breakfasts to elegant dinners, our menu is designed to delight every palate. Enjoy a memorable dining experience in a cozy and stylish ambiance, paired with exceptional service. In addition to serving great food, our Hungry Eye Restaurant also hosts a live cultural program every evening from 7 pm till 9 pm, which consistently delivers a truly memorable dining experience.
-        </p>
-      </div>
-
-      <div class="col-12 col-md-6 position-relative overflow-hidden reveal from-right delay-2">
-        <div id="menuSlider" class="d-flex transition-slider">
-          <div class="flex-shrink-0 w-100" style="height:425px;">
-            <img class="w-100 h-100 object-fit-cover" src="./assets/images/events-3.png" alt="">
-          </div>
-          <div class="flex-shrink-0 w-100" style="height:425px;">
-            <img class="w-100 h-100 object-fit-cover" src="./assets/images/welcome-img-4.png" alt="">
-          </div>
-          <div class="flex-shrink-0 w-100" style="height:425px;">
-            <img class="w-100 h-100 object-fit-cover" src="./assets/images/welcome-img-1.png" alt="">
-          </div>
-          <div class="flex-shrink-0 w-100" style="height:425px;">
-            <img class="w-100 h-100 object-fit-cover" src="./assets/images/welcome-img-3.png" alt="">
-          </div>
-          <div class="flex-shrink-0 w-100" style="height:425px;">
-            <img class="w-100 h-100 object-fit-cover" src="./assets/images/welcome-img-5.png" alt="">
-          </div>
-        </div>
-
-        <button id="menuPrev"
-                type="button"
-                class="position-absolute top-50 start-0 translate-middle-y btn btn-light rounded-circle shadow"
-                style="width:60px; height:60px; font-size:1.5rem; opacity:.7;">
-          &lt;
-        </button>
-
-        <button id="menuNext"
-                type="button"
-                class="position-absolute top-50 end-0 translate-middle-y btn btn-light rounded-circle shadow"
-                style="width:60px; height:60px; font-size:1.5rem; opacity:.7;">
-          &gt;
-        </button>
-      </div>
-    </div>
-
-    <div class="row mt-5 g-4">
-      <div class="col-12 col-sm-6 col-lg-4 reveal from-up delay-1">
-        <a href="#" class="d-block menu-hover">
-          <div style="min-height:400px;">
-            <img src="./assets/images/menu1.png" class="w-100 h-100 object-fit-cover" alt="">
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-4 reveal from-up delay-2">
-        <a href="#" class="d-block menu-hover">
-          <div style="min-height:400px;">
-            <img src="./assets/images/menu1.png" class="w-100 h-100 object-fit-cover" alt="">
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-4 reveal from-up delay-3">
-        <a href="#" class="d-block menu-hover">
-          <div style="min-height:400px;">
-            <img src="./assets/images/menu2.png" class="w-100 h-100 object-fit-cover" alt="">
-          </div>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <script>
   (function () {
     const track = document.getElementById('menuSlider');
@@ -1340,6 +1893,867 @@ document.addEventListener("DOMContentLoaded", function () {
       serviceCard.style.background = 'rgba(0,0,0,.3)';
     });
   });
+</script>
+
+
+
+<section class="py-5 px-3 position-relative text-white overflow-hidden reveal from-up">
+
+  <img
+    src="./assets/images/wlc.png"
+    alt="Policy background"
+    class="position-absolute top-0 start-0 w-100 h-100"
+    style="object-fit:cover; z-index:0;"
+  >
+
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100"
+    style="background:rgba(0,0,0,.6); z-index:1;"
+  ></div>
+
+  <div class="container position-relative" style="max-width:1100px; z-index:2;">
+
+    <h2 class="text-center mb-3 reveal from-up delay-1"
+        style="font-family:'Gilda Display', serif; font-weight:400; letter-spacing:.04em; font-size: clamp(1.75rem, 3vw, 2.5rem);">
+      Hotel Policies
+    </h2>
+
+    <div class="d-flex align-items-center justify-content-center reveal from-up delay-2">
+      <img src="./assets/images/decorated-pattern.svg" alt="">
+    </div>
+
+    <div class="row mt-5 g-4 text-white">
+
+      <div class="col-12 col-md-6 reveal from-left delay-3">
+
+        <div class="border-bottom pb-3">
+
+          <h5 style="font-family:'Gilda Display', serif;">Check-in / Check-out</h5>
+
+          <p style="font-family:'Barlow', sans-serif; font-size:.95rem; color:#d1d5db;">
+            Check-in begins at 2:00 PM. Early check-in depends on room availability.
+          </p>
+
+          <p style="font-family:'Barlow', sans-serif; font-size:.95rem; color:#d1d5db;">
+            Check-out time is 12:00 PM. Late check-out may include an additional charge.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-12 col-md-6 reveal from-right delay-4">
+
+        <div class="border-bottom pb-3">
+
+          <h5 style="font-family:'Gilda Display', serif;">Cancellation & Refund</h5>
+
+          <p style="font-family:'Barlow', sans-serif; font-size:.95rem; color:#d1d5db;">
+            Free cancellation is available up to 24 hours before arrival.
+          </p>
+
+          <p style="font-family:'Barlow', sans-serif; font-size:.95rem; color:#d1d5db;">
+            Late cancellation or no-show may result in a one-night charge.
+          </p>
+
+          <p style="font-family:'Barlow', sans-serif; font-size:.95rem; color:#d1d5db;">
+            Refunds are processed within 5 to 7 business days.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="row mt-5">
+
+      <div class="col-12 text-center reveal from-up delay-5">
+
+        <h3 style="font-family:'Gilda Display', serif;">
+          Frequently Asked Questions
+        </h3>
+
+      </div>
+
+      <div class="col-lg-8 mx-auto mt-4">
+
+        <div class="accordion" id="faqAccordion">
+
+          <div class="accordion-item bg-transparent border-bottom text-white reveal from-left delay-6">
+
+            <h2 class="accordion-header">
+
+              <button class="accordion-button collapsed bg-transparent text-white border-0"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1">
+
+                What time is check-in?
+
+              </button>
+
+            </h2>
+
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body"
+                   style="font-family:'Barlow', sans-serif; color:#d1d5db;">
+
+                Check-in starts at 2:00 PM. Early check-in depends on availability.
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="accordion-item bg-transparent border-bottom text-white reveal from-right delay-7">
+
+            <h2 class="accordion-header">
+
+              <button class="accordion-button collapsed bg-transparent text-white border-0"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2">
+
+                What time is check-out?
+
+              </button>
+
+            </h2>
+
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body"
+                   style="font-family:'Barlow', sans-serif; color:#d1d5db;">
+
+                Check-out time is 12:00 PM.
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="accordion-item bg-transparent border-bottom text-white reveal from-left delay-8">
+
+            <h2 class="accordion-header">
+
+              <button class="accordion-button collapsed bg-transparent text-white border-0"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3">
+
+                Do you allow free cancellation?
+
+              </button>
+
+            </h2>
+
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body"
+                   style="font-family:'Barlow', sans-serif; color:#d1d5db;">
+
+                Yes. Free cancellation is allowed up to 24 hours before arrival.
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="py-5 px-3 position-relative  bg-nero text-white overflow-hidden reveal from-up">
+
+
+
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100"
+    style="background:rgba(0,0,0,.65); z-index:1;"
+  ></div>
+
+  <div class="container position-relative" style="max-width:1200px; z-index:2;">
+
+    <h2 class="text-center mb-3 reveal from-up delay-1"
+        style="font-family:'Gilda Display', serif; font-weight:400; letter-spacing:.04em; font-size: clamp(1.75rem, 3vw, 2.875rem);">
+      Guest Trust & Recognition
+    </h2>
+
+    <div class="d-flex align-items-center justify-content-center reveal from-up delay-2">
+      <img src="./assets/images/decorated-pattern.svg" alt="">
+    </div>
+
+    <p class="text-center mx-auto mt-3 reveal from-up delay-3"
+       style="font-family:'Barlow', sans-serif; color:#d1d5db; max-width:700px; font-size:1rem;">
+      Trusted by guests for comfortable stays, attentive service, and a warm experience in the heart of Lakeside, Pokhara.
+    </p>
+
+    <div class="row g-4 mt-4">
+
+      <div class="col-12 col-md-4 reveal from-left delay-4">
+        <div class="text-center border rounded p-4 h-100" style="background:rgba(255,255,255,.06);">
+
+          <div class="mb-3">
+            <i class="bi bi-star-fill" style="font-size:2rem; color:#c79a5b;"></i>
+          </div>
+
+          <h4 style="font-family:'Gilda Display', serif; color:#fff;">
+            Google Rating
+          </h4>
+
+          <div class="mb-2" style="color:#c79a5b; font-size:1.1rem;">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+
+          <h2 style="font-family:'Gilda Display', serif; color:#c79a5b; font-size:2.5rem; margin-bottom:.25rem;">
+            4.7
+          </h2>
+
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; font-size:.95rem; margin-bottom:0;">
+            Based on 120 plus guest reviews
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-up delay-5">
+        <div class="text-center border rounded p-4 h-100" style="background:rgba(255,255,255,.06);">
+
+          <div class="mb-3">
+            <i class="bi bi-patch-check-fill" style="font-size:2rem; color:#c79a5b;"></i>
+          </div>
+
+          <h4 style="font-family:'Gilda Display', serif; color:#fff;">
+            Verified Hospitality
+          </h4>
+
+          <h2 style="font-family:'Gilda Display', serif; color:#c79a5b; font-size:2rem;">
+            Trusted Stay
+          </h2>
+
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; font-size:.95rem; margin-bottom:0;">
+            Clean rooms, prompt support, and a guest-first service approach.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-right delay-6">
+        <div class="text-center border rounded p-4 h-100" style="background:rgba(255,255,255,.06);">
+
+          <div class="mb-3">
+            <i class="bi bi-award-fill" style="font-size:2rem; color:#c79a5b;"></i>
+          </div>
+
+          <h4 style="font-family:'Gilda Display', serif; color:#fff;">
+            Hotel Classification
+          </h4>
+
+          <h2 style="font-family:'Gilda Display', serif; color:#c79a5b; font-size:2rem;">
+            3 Star Hotel
+          </h2>
+
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; font-size:.95rem; margin-bottom:0;">
+            Quality accommodation with essential luxury and modern comfort.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row text-center mt-5 g-4">
+
+      <div class="col-6 col-md-3 reveal from-left delay-7">
+        <div class="border rounded py-3 px-2 h-100" style="background:rgba(255,255,255,.04);">
+          <h3 style="font-family:'Gilda Display', serif; color:#c79a5b; margin-bottom:.25rem;">120+</h3>
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; margin-bottom:0; font-size:.9rem;">Guest Reviews</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 reveal from-up delay-8">
+        <div class="border rounded py-3 px-2 h-100" style="background:rgba(255,255,255,.04);">
+          <h3 style="font-family:'Gilda Display', serif; color:#c79a5b; margin-bottom:.25rem;">24/7</h3>
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; margin-bottom:0; font-size:.9rem;">Guest Support</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 reveal from-up delay-9">
+        <div class="border rounded py-3 px-2 h-100" style="background:rgba(255,255,255,.04);">
+          <h3 style="font-family:'Gilda Display', serif; color:#c79a5b; margin-bottom:.25rem;">100%</h3>
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; margin-bottom:0; font-size:.9rem;">Comfort Focused</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 reveal from-right delay-10">
+        <div class="border rounded py-3 px-2 h-100" style="background:rgba(255,255,255,.04);">
+          <h3 style="font-family:'Gilda Display', serif; color:#c79a5b; margin-bottom:.25rem;">Top</h3>
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; margin-bottom:0; font-size:.9rem;">Lakeside Location</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-5 g-4">
+
+      <div class="col-12 text-center reveal from-up delay-11">
+        <h3 style="font-family:'Gilda Display', serif; color:#fff;">
+          What Guests Appreciate
+        </h3>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-left delay-12">
+        <div class="border-bottom pb-3">
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; font-size:1rem; margin-bottom:.5rem;">
+            “Excellent location, clean rooms, and helpful staff throughout the stay.”
+          </p>
+          <span style="font-family:'Barlow', sans-serif; color:#c79a5b; font-size:.9rem;">
+            Verified Guest
+          </span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-up delay-13">
+        <div class="border-bottom pb-3">
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; font-size:1rem; margin-bottom:.5rem;">
+            “The mountain view, quiet atmosphere, and service made the stay memorable.”
+          </p>
+          <span style="font-family:'Barlow', sans-serif; color:#c79a5b; font-size:.9rem;">
+            Verified Guest
+          </span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-right delay-14">
+        <div class="border-bottom pb-3">
+          <p style="font-family:'Barlow', sans-serif; color:#d1d5db; font-size:1rem; margin-bottom:.5rem;">
+            “Smooth check-in, good hospitality, and a comfortable room near Lakeside.”
+          </p>
+          <span style="font-family:'Barlow', sans-serif; color:#c79a5b; font-size:.9rem;">
+            Verified Guest
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-5 text-center g-3">
+
+      <div class="col-12 reveal from-up delay-15">
+        <h4 style="font-family:'Gilda Display', serif; color:#fff;">
+          Recognized On
+        </h4>
+      </div>
+
+      <div class="col-4 col-md-2 mx-auto reveal from-left delay-16">
+        <div class="border rounded py-3" style="background:rgba(255,255,255,.04); font-family:'Barlow', sans-serif; color:#d1d5db;">
+          Google
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 reveal from-up delay-17">
+        <div class="border rounded py-3" style="background:rgba(255,255,255,.04); font-family:'Barlow', sans-serif; color:#d1d5db;">
+          Booking
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 reveal from-right delay-18">
+        <div class="border rounded py-3" style="background:rgba(255,255,255,.04); font-family:'Barlow', sans-serif; color:#d1d5db;">
+          TripAdvisor
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-5">
+
+      <div class="col-12 text-center reveal from-up delay-19">
+
+        <h3 style="font-family:'Gilda Display', serif; color:#fff;">
+          Share Your Experience
+        </h3>
+
+        <p style="font-family:'Barlow', sans-serif; color:#d1d5db; max-width:600px; margin:auto;">
+          Guests value honest feedback. Tell others about your stay at Crystal Fall Pokhara.
+        </p>
+
+      </div>
+
+      <div class="col-lg-8 mx-auto mt-4">
+
+        <form class="reveal from-up delay-20">
+
+          <div class="row g-4">
+
+            <div class="col-md-6">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="form-control bg-transparent text-white border-0 border-bottom rounded-0 py-3"
+                style="box-shadow:none; caret-color:#fff;"
+              >
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="form-control bg-transparent text-white border-0 border-bottom rounded-0 py-3"
+                style="box-shadow:none; caret-color:#fff;"
+              >
+            </div>
+
+            <div class="col-12">
+              <select
+                class="form-select bg-transparent text-white border-0 border-bottom rounded-0 py-3"
+                style="box-shadow:none;"
+              >
+                <option selected disabled>Rating</option>
+                <option class="text-dark">5 Star</option>
+                <option class="text-dark">4 Star</option>
+                <option class="text-dark">3 Star</option>
+                <option class="text-dark">2 Star</option>
+                <option class="text-dark">1 Star</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <textarea
+                rows="3"
+                placeholder="Write your review"
+                class="form-control bg-transparent text-white border-0 border-bottom rounded-0 py-3"
+                style="box-shadow:none; caret-color:#fff;"
+              ></textarea>
+            </div>
+
+            <div class="col-12 text-center">
+              <button
+                type="submit"
+                class="btn btn-light px-4 mt-3 text-uppercase"
+                style="min-width:160px; letter-spacing:.12em;">
+                submit review
+              </button>
+            </div>
+
+            <div class="col-12 text-center">
+              <a
+                href="https://maps.app.goo.gl/EEtcBtbeQJVrHitL6"
+                class="btn mt-2 text-uppercase"
+                style="background:#c79a5b; color:#fff; min-width:210px; letter-spacing:.12em;">
+                Write a Google Review
+              </a>
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="py-5 bg-light-gray reveal from-up" id="menu">
+  <div class="container px-3 px-md-4" style="max-width:1200px;">
+
+    <h2 class="font-gilda fw-medium text-coyote text-center mb-3 reveal from-up delay-1"
+        style="font-size:clamp(2rem, 4vw, 42px); letter-spacing:.04em;">
+      MENU
+    </h2>
+
+    <div class="d-flex align-items-center justify-content-center mb-4 reveal from-up delay-2">
+      <img src="./assets/images/decorated-pattern-2.svg" alt="">
+    </div>
+
+    <div class="row align-items-center g-4 g-lg-5 mb-5">
+
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start reveal from-left delay-1">
+        <h3 class="text-coyote text-uppercase font-barlow-cond opacity-75"
+            style="letter-spacing:.25em; font-size:clamp(1rem, 2vw, 22px);">
+          Discover
+        </h3>
+
+        <h1 class="font-gilda text-black py-2 py-md-3 mb-2 mb-md-3"
+            style="font-size:clamp(1.9rem, 4vw, 38px); letter-spacing:.04em;">
+          Our Restaurant Menu
+        </h1>
+
+        <p class="font-barlow text-black text-justify mb-3"
+           style="font-size:clamp(.95rem, 2vw, 1.05rem); line-height:1.7;">
+          Enjoy a selection of Nepali, continental, and house-special dishes prepared with fresh ingredients and served in a warm dining space.
+        </p>
+
+        <div class="font-barlow w-100" style="font-size:clamp(.95rem, 2vw, 1rem); color:#6b7280;">
+          <div class="mb-2"><strong style="color:#111;">Restaurant Seating Capacity:</strong> 60 Guests</div>
+          <div class="mb-2"><strong style="color:#111;">Price Range:</strong> NPR 250 to NPR 2,500</div>
+          <div><strong style="color:#111;">Dietary Options:</strong> Vegetarian, Vegan, Gluten-Free</div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 position-relative overflow-hidden reveal from-right delay-2" style="border-radius:1rem;">
+        <div id="menuSlider" class="d-flex transition-slider">
+          <div class="flex-shrink-0 w-100" style="height:clamp(240px, 55vw, 425px);">
+            <img class="w-100 h-100 object-fit-cover" src="./assets/images/menu1.png" alt="">
+          </div>
+          <div class="flex-shrink-0 w-100" style="height:clamp(240px, 55vw, 425px);">
+            <img class="w-100 h-100 object-fit-cover" src="./assets/images/menu2.png" alt="">
+          </div>
+          <div class="flex-shrink-0 w-100" style="height:clamp(240px, 55vw, 425px);">
+            <img class="w-100 h-100 object-fit-cover" src="./assets/images/events-3.png" alt="">
+          </div>
+          <div class="flex-shrink-0 w-100" style="height:clamp(240px, 55vw, 425px);">
+            <img class="w-100 h-100 object-fit-cover" src="./assets/images/welcome-img-4.png" alt="">
+          </div>
+        </div>
+
+        <button id="menuPrev"
+                type="button"
+                class="position-absolute top-50 start-0 translate-middle-y btn btn-light rounded-circle shadow"
+                style="width:clamp(42px, 10vw, 60px); height:clamp(42px, 10vw, 60px); font-size:clamp(1rem, 3vw, 1.5rem); opacity:.85; left:10px;">
+          &lt;
+        </button>
+
+        <button id="menuNext"
+                type="button"
+                class="position-absolute top-50 end-0 translate-middle-y btn btn-light rounded-circle shadow"
+                style="width:clamp(42px, 10vw, 60px); height:clamp(42px, 10vw, 60px); font-size:clamp(1rem, 3vw, 1.5rem); opacity:.85; right:10px;">
+          &gt;
+        </button>
+      </div>
+
+    </div>
+
+    <div class="row g-4 mb-5">
+
+      <div class="col-12 text-center reveal from-up delay-3">
+        <h3 class="font-gilda text-black" style="font-size:clamp(1.6rem, 3vw, 32px); letter-spacing:.04em;">
+          Signature Dishes
+        </h3>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 reveal from-left delay-4">
+        <div class="bg-white shadow h-100" style="border-radius:1rem; overflow:hidden;">
+          <img src="https://weekendatthecottage.com/wp-content/uploads/2021/07/WholeGrilledRainbowTrout10.jpg"
+               class="w-100"
+               style="height:clamp(220px, 45vw, 260px); object-fit:cover;"
+               alt="">
+          <div class="p-3 p-md-4">
+            <h4 style="font-family:'Gilda Display', serif; color:#111; font-size:clamp(1.15rem, 2.5vw, 1.4rem);">
+              Grilled Himalayan Trout
+            </h4>
+            <p style="font-family:'Barlow', sans-serif; color:#6b7280; font-size:.95rem;">
+              Fresh trout served with seasonal vegetables and lemon butter sauce.
+            </p>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <span style="color:#c79a5b; font-weight:600;">NPR 1,450</span>
+              <span class="badge text-bg-light">Signature</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 reveal from-up delay-5">
+        <div class="bg-white shadow h-100" style="border-radius:1rem; overflow:hidden;">
+          <img src="https://walnutbistronepal.com/wp-content/uploads/2023/12/Chicken-Sizzler.png"
+               class="w-100"
+               style="height:clamp(220px, 45vw, 260px); object-fit:cover;"
+               alt="">
+          <div class="p-3 p-md-4">
+            <h4 style="font-family:'Gilda Display', serif; color:#111; font-size:clamp(1.15rem, 2.5vw, 1.4rem);">
+              CrystalFall Chicken Sizzler
+            </h4>
+            <p style="font-family:'Barlow', sans-serif; color:#6b7280; font-size:.95rem;">
+              House-special sizzling chicken served with rice, fries, and sautéed vegetables.
+            </p>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <span style="color:#c79a5b; font-weight:600;">NPR 1,250</span>
+              <span class="badge text-bg-light">Signature</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 reveal from-right delay-6 mx-md-auto mx-lg-0">
+        <div class="bg-white shadow h-100" style="border-radius:1rem; overflow:hidden;">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/19/70/a0/4d/photo0jpg.jpg"
+               class="w-100"
+               style="height:clamp(220px, 45vw, 260px); object-fit:cover;"
+               alt="">
+          <div class="p-3 p-md-4">
+            <h4 style="font-family:'Gilda Display', serif; color:#111; font-size:clamp(1.15rem, 2.5vw, 1.4rem);">
+              Pokhara Special Thali
+            </h4>
+            <p style="font-family:'Barlow', sans-serif; color:#6b7280; font-size:.95rem;">
+              A complete Nepali meal with rice, lentils, curry, pickles, and seasonal sides.
+            </p>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <span style="color:#c79a5b; font-weight:600;">NPR 850</span>
+              <span class="badge text-bg-light">Signature</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-12 text-center reveal from-up delay-7">
+        <h3 class="font-gilda text-black" style="font-size:clamp(1.6rem, 3vw, 32px); letter-spacing:.04em;">
+          Food & Beverage List
+        </h3>
+      </div>
+
+      <div class="col-12 col-md-6 reveal from-left delay-8">
+        <div class="bg-white shadow p-3 p-md-4 h-100" style="border-radius:1rem;">
+          <h4 style="font-family:'Gilda Display', serif; color:#111;">Food Items</h4>
+
+          <div class="mt-4">
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Margherita Pizza</strong><br>
+                <small style="color:#6b7280;">Vegetarian</small>
+              </div>
+              <span class="ms-auto">NPR 750</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Veg Chowmein</strong><br>
+                <small style="color:#6b7280;">Vegan Option</small>
+              </div>
+              <span class="ms-auto">NPR 450</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Chicken Mo:Mo</strong><br>
+                <small style="color:#6b7280;">House Favorite</small>
+              </div>
+              <span class="ms-auto">NPR 480</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Pasta Alfredo</strong><br>
+                <small style="color:#6b7280;">Vegetarian Available</small>
+              </div>
+              <span class="ms-auto">NPR 820</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Caesar Salad</strong><br>
+                <small style="color:#6b7280;">Gluten-Free Option</small>
+              </div>
+              <span class="ms-auto">NPR 650</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 reveal from-right delay-9">
+        <div class="bg-white shadow p-3 p-md-4 h-100" style="border-radius:1rem;">
+          <h4 style="font-family:'Gilda Display', serif; color:#111;">Beverage Items</h4>
+
+          <div class="mt-4">
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Fresh Lemon Soda</strong><br>
+                <small style="color:#6b7280;">Non-Alcoholic</small>
+              </div>
+              <span class="ms-auto">NPR 250</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Cold Coffee</strong><br>
+                <small style="color:#6b7280;">Best Seller</small>
+              </div>
+              <span class="ms-auto">NPR 320</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Masala Tea</strong><br>
+                <small style="color:#6b7280;">Hot Beverage</small>
+              </div>
+              <span class="ms-auto">NPR 180</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>Fresh Orange Juice</strong><br>
+                <small style="color:#6b7280;">Natural</small>
+              </div>
+              <span class="ms-auto">NPR 300</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start gap-3 border-bottom py-2 flex-wrap">
+              <div>
+                <strong>House Mocktail</strong><br>
+                <small style="color:#6b7280;">Signature Drink</small>
+              </div>
+              <span class="ms-auto">NPR 450</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-5 g-4">
+
+      <div class="col-12 text-center reveal from-up delay-10">
+        <h3 class="font-gilda text-black" style="font-size:clamp(1.6rem, 3vw, 32px); letter-spacing:.04em;">
+          Dietary Options
+        </h3>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-left delay-11">
+        <div class="bg-white shadow text-center p-3 p-md-4 h-100" style="border-radius:1rem;">
+          <h4 style="font-family:'Gilda Display', serif; color:#111;">Vegetarian</h4>
+          <p style="font-family:'Barlow', sans-serif; color:#6b7280; margin-bottom:0;">
+            Pizza, pasta, salads, veg chowmein, and local vegetarian meals.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-up delay-12">
+        <div class="bg-white shadow text-center p-3 p-md-4 h-100" style="border-radius:1rem;">
+          <h4 style="font-family:'Gilda Display', serif; color:#111;">Vegan</h4>
+          <p style="font-family:'Barlow', sans-serif; color:#6b7280; margin-bottom:0;">
+            Selected noodle dishes, salads, fresh juices, and customizable meals.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 reveal from-right delay-13">
+        <div class="bg-white shadow text-center p-3 p-md-4 h-100" style="border-radius:1rem;">
+          <h4 style="font-family:'Gilda Display', serif; color:#111;">Gluten-Free</h4>
+          <p style="font-family:'Barlow', sans-serif; color:#6b7280; margin-bottom:0;">
+            Rice-based meals, grilled fish, salads, and selected breakfast items.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  #menu .transition-slider{
+    transition: transform .5s ease;
+  }
+
+  #menu .menu-hover{
+    transition: transform .3s ease;
+  }
+
+  #menu .menu-hover:hover{
+    transform: translateY(-20px);
+  }
+
+  @media (max-width: 767.98px){
+    #menu .text-justify{
+      text-align:left !important;
+    }
+
+    #menu #menuPrev,
+    #menu #menuNext{
+      top:auto !important;
+      bottom:12px;
+      transform:none !important;
+    }
+
+    #menu #menuPrev{
+      left:12px !important;
+    }
+
+    #menu #menuNext{
+      right:12px !important;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const track = document.getElementById('menuSlider');
+    const prev = document.getElementById('menuPrev');
+    const next = document.getElementById('menuNext');
+    if (!track || !prev || !next) return;
+
+    const slides = Array.from(track.children);
+    let index = 0;
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prev.addEventListener('click', function (e) {
+      e.preventDefault();
+      goTo(index - 1);
+    });
+
+    next.addEventListener('click', function (e) {
+      e.preventDefault();
+      goTo(index + 1);
+    });
+
+    goTo(0);
+  })();
+</script>
+<script>
+  (function () {
+    const track = document.getElementById('menuSlider');
+    const prev = document.getElementById('menuPrev');
+    const next = document.getElementById('menuNext');
+    if (!track || !prev || !next) return;
+
+    const slides = Array.from(track.children);
+    let index = 0;
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prev.addEventListener('click', function (e) {
+      e.preventDefault();
+      goTo(index - 1);
+    });
+
+    next.addEventListener('click', function (e) {
+      e.preventDefault();
+      goTo(index + 1);
+    });
+
+    goTo(0);
+  })();
 </script>
 
 <section>
