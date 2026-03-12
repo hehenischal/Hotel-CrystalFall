@@ -9,6 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gilda+Display&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
         <meta property="og:title" content="CrystalFall Hotel | Luxury Stay in Pokhara">
@@ -32,6 +34,52 @@
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="../dist/main.css">
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Hotel CrystalFall",
+        "url": "https://hotelcrystalfall.com/",
+        "telephone": "+977-9856044750",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Pokhara",
+            "addressCountry": "NP"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.8,
+            "reviewCount": 158
+        },
+        "review": [
+            {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sumit Singla" },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5
+            },
+            "reviewBody": "I had a pleasant stay at Hotel Crystal Fall, Pokhara. The rooms are managed well, with centrally distributed hot water and good bathroom consumables. Boarding service and food quality are satisfying, especially for vegetarians. There’s no room AC, only a fan – but honestly, there’s no real need for AC in this climate, so it works fine. Keep it up!""
+        },
+            {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Jeganathan Chellamaraja" },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5
+            },
+            "reviewBody": "Rooms are managed well. Centrally distributed hot water and bathroom 
+            consumables are good. There's no room service, but that's not our problem. 
+            Boarding service and food quality is good for vegetarians. One thing. 
+            Communication skills in English is also essential for hotel industry people 
+            to manage non-Hindi speakers. Keep it up. Good experience. No more complaints."
+            }
+        ]
+        }
+        </script>
+
+
     </head>
  </head>
     <header class="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-sm">
@@ -129,124 +177,126 @@
     </div>
     <!-- Checkout Input -->
         <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-                                    <input
-                                        type="date"
-                                        name="checkout"
-                                        id="checkout"
-                                        class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                                    >
-                                    <span class="cursor-pointer" onclick="openCheckoutCalendar()">
-                                        <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                                    </span>
+            <input
+                type="date"
+                name="checkout"
+                id="checkout"
+                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer">
+                <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+            </span>
         </div>
+        </div>
+
+            <!-- Checkin Input for Desktop -->
+            <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
+            <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+                <input
+                    type="date"
+                    name="checkin"
+                    id="checkinDesktop"
+                    class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer">
+                        <span class="cursor-pointer" onclick="openCheckinCalendar()">
+                            <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+                        </span>
+                        </div>
                         </div>
 
-                            <!-- Checkin Input for Desktop -->
-                            <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
-                                <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-                                    <input
-                                        type="date"
-                                        name="checkin"
-                                        id="checkinDesktop"
-                                        class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                                    >
-                                    <span class="cursor-pointer" onclick="openCheckinCalendar()">
-                                        <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                                    </span>
-                                </div>
-                            </div>
+            <!-- Checkout Input for Desktop -->
+                <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
+                <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+                    <input
+                        type="date"
+                        name="checkout"
+                        id="checkoutDesktop"
+                        class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer">
+                        <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+                        <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+                    </span>
+                 </div>
+                </div>
 
-                            <!-- Checkout Input for Desktop -->
-                            <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
-                                <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-                                    <input
-                                        type="date"
-                                        name="checkout"
-                                        id="checkoutDesktop"
-                                        class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                                    >
-                                    <span class="cursor-pointer" onclick="openCheckoutCalendar()">
-                                        <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                                    </span>
-                                </div>
-                            </div>
+            
+            <!-- Adult Select -->
+                <div class="px-2 py-4 border-[1px]">
+                <select class="min-w-full uppercase text-eerie-black outline-none">
+                    <option disabled selected>adult</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                </div>
 
-                            <!-- Adult Select -->
-                            <div class="px-2 py-4 border-[1px]">
-                                <select class="min-w-full uppercase text-eerie-black outline-none">
-                                    <option disabled selected>adult</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                            </div>
+                            
+            <!-- Children Select -->
+                <div class="px-2 py-4 border-[1px]">
+                <select class="min-w-full uppercase text-eerie-black outline-none">
+                    <option disabled selected>children</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    </select>
+                    </div>
 
-                            <!-- Children Select -->
-                            <div class="px-2 py-4 border-[1px]">
-                                <select class="min-w-full uppercase text-eerie-black outline-none">
-                                    <option disabled selected>children</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                            </div>
+                   
+            <!-- Room Select -->
+            <div class="px-2 py-4 border-[1px]">
+            <select class="min-w-full uppercase text-eerie-black outline-none">
+                <option selected>1 room</option>
+                <option>2 room</option>
+                <option>3 room</option>
+                </select>
+            </div>
 
-                            <!-- Room Select -->
-                            <div class="px-2 py-4 border-[1px]">
-                                <select class="min-w-full uppercase text-eerie-black outline-none">
-                                    <option selected>1 room</option>
-                                    <option>2 room</option>
-                                    <option>3 room</option>
-                                </select>
-                            </div>
+                            
+            
+            <!-- Submit Button -->
+            <button
+            type="submit"
+            class="w-full bg-lion font-barlow px-4 min-h-[56px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark tracking-widest rounded">
+                Check Now
+                </button>
+            </form>
 
-                            <!-- Submit Button -->
-                            <button
-                                type="submit"
-                                class="w-full bg-lion font-barlow px-4 min-h-[56px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark tracking-widest rounded">
-                                Check Now
-                            </button>
+                    
+            <script>
+            // Mobile inputs
+            const checkin = document.getElementById('checkin');
+            const checkout = document.getElementById('checkout');
 
-                        </form>
+            // Desktop inputs
+            const checkinDesktop = document.getElementById('checkinDesktop');
+            const checkoutDesktop = document.getElementById('checkoutDesktop');
 
-                    <script>
-                        // Mobile inputs
-                        const checkin = document.getElementById('checkin');
-                        const checkout = document.getElementById('checkout');
+            // Set today as default check-in
+            const today = new Date().toISOString().split('T')[0];
+            if (checkin) checkin.value = today;
+            if (checkinDesktop) checkinDesktop.value = today;
 
-                        // Desktop inputs
-                        const checkinDesktop = document.getElementById('checkinDesktop');
-                        const checkoutDesktop = document.getElementById('checkoutDesktop');
+            // Set tomorrow as default check-out
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const tomorrowStr = tomorrow.toISOString().split('T')[0];
+            if (checkout) checkout.value = tomorrowStr;
+            if (checkoutDesktop) checkoutDesktop.value = tomorrowStr;
 
-                        // Set today as default check-in
-                        const today = new Date().toISOString().split('T')[0];
-                        if (checkin) checkin.value = today;
-                        if (checkinDesktop) checkinDesktop.value = today;
+            // Optional: set min dates so past dates can't be picked
+            if (checkin) checkin.min = today;
+            if (checkout) checkout.min = tomorrowStr;
+            if (checkinDesktop) checkinDesktop.min = today;
+            if (checkoutDesktop) checkoutDesktop.min = tomorrowStr;
 
-                        // Set tomorrow as default check-out
-                        const tomorrow = new Date();
-                        tomorrow.setDate(tomorrow.getDate() + 1);
-                        const tomorrowStr = tomorrow.toISOString().split('T')[0];
-                        if (checkout) checkout.value = tomorrowStr;
-                        if (checkoutDesktop) checkoutDesktop.value = tomorrowStr;
+            // Calendar picker functions
+            function openCheckinCalendar() {
+                checkin?.showPicker();
+                checkinDesktop?.showPicker();
+            }
 
-                        // Optional: set min dates so past dates can't be picked
-                        if (checkin) checkin.min = today;
-                        if (checkout) checkout.min = tomorrowStr;
-                        if (checkinDesktop) checkinDesktop.min = today;
-                        if (checkoutDesktop) checkoutDesktop.min = tomorrowStr;
-
-                        // Calendar picker functions
-                        function openCheckinCalendar() {
-                            checkin?.showPicker();
-                            checkinDesktop?.showPicker();
-                        }
-
-                        function openCheckoutCalendar() {
-                            checkout?.showPicker();
-                            checkoutDesktop?.showPicker();
-                        }
-                    </script>
+            function openCheckoutCalendar() {
+                checkout?.showPicker();
+                checkoutDesktop?.showPicker();
+            }
+        </script>
     </section>
 
 
@@ -842,474 +892,474 @@
 
 
 
-    <section class="py-16 px-3 bg-nero">
-    <div class="container max-w-[1200px] mx-auto">
-    
-    <!-- Section Header -->
-    <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-center text-white mb-3">
-      Blogs & Stories
-    </h2>
-    <div class="flex items-center justify-center mb-10">
-      <img src="../assets/images/decorated-pattern.svg" alt="">
-    </div>
+        <section class="py-16 px-3 bg-nero">
+            <div class="container max-w-[1200px] mx-auto">
+            
+            <!-- Section Header -->
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-center text-white mb-3">
+            Blogs & Stories
+            </h2>
+            <div class="flex items-center justify-center mb-10">
+            <img src="../assets/images/decorated-pattern.svg" alt="">
+            </div>
 
-    <!-- Blog Grid -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Blog Grid -->
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
-    <!-- Blog Card -->
-    <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
-    <img 
-        src="../assets/images/wlc9.png" 
-        alt="Calm side of Pokhara near Lakeside – CrystalFall Hotel" 
-        class="w-full h-[300px] object-cover">
+            <!-- Blog Card -->
+            <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
+            <img 
+                src="../assets/images/wlc9.png" 
+                alt="Calm side of Pokhara near Lakeside – CrystalFall Hotel" 
+                class="w-full h-[300px] object-cover">
 
-    <div class="p-6">
-        <!-- Category -->
-        <span class="text-xs uppercase tracking-widest text-lion font-barlow">
-        Hotel • Pokhara
-        </span>
+            <div class="p-6">
+                <!-- Category -->
+                <span class="text-xs uppercase tracking-widest text-lion font-barlow">
+                Hotel • Pokhara
+                </span>
 
-        <!-- Blog Title -->
-        <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
-        Best Hotels in Lakeside Pokhara: Peaceful Stay Near Lakeside
-        </h3>
+                <!-- Blog Title -->
+                <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
+                Best Hotels in Lakeside Pokhara: Peaceful Stay Near Lakeside
+                </h3>
 
-        <!-- Blog Snippet -->
-        <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
-        Discover peaceful mornings, lake reflections, and slow living around Lakeside Pokhara — perfect for travelers seeking calm and comfort.
-        </p>
+                <!-- Blog Snippet -->
+                <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
+                Discover peaceful mornings, lake reflections, and slow living around Lakeside Pokhara — perfect for travelers seeking calm and comfort.
+                </p>
 
-        <!-- Date + Read More -->
-        <div class="flex items-center justify-between mt-5">
-        <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow">
-            Jan 18, 2026
-        </time>
-
-        <a href="#!" 
-            class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
-            onclick="document.getElementById('blog-modal-1').classList.remove('hidden')">
-            Read More
-        </a>
-        </div>
-    </div>
-    </article>
-
-        <!-- Blog Card -->
-    <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
-        <img 
-            src="../assets/images/wlc5.png"
-            alt="Romantic getaway in Pokhara near Phewa Lake – CrystalFall Hotel"
-            class="w-full h-[300px] object-cover">
-
-        <div class="p-6">
-            <!-- Category -->
-            <span class="text-xs uppercase tracking-widest text-lion font-barlow">
-                Couples • Experience
-            </span>
-
-            <!-- Blog Title -->
-            <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
-                Romantic Getaway in Pokhara: Perfect Stay for Couples
-            </h3>
-
-            <!-- Blog Snippet -->
-            <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
-                From serene lake walks to breathtaking mountain sunsets, discover why Pokhara is the ultimate 
-                destination for couples seeking romance, relaxation, and unforgettable memories at CrystalFall Hotel.
-            </p>
-
-            <!-- Date + Read More -->
-            <div class="flex items-center justify-between mt-5">
-                <time datetime="2026-01-24" class="text-xs text-gray-400 font-barlow">
-                    Jan 24, 2026
+                <!-- Date + Read More -->
+                <div class="flex items-center justify-between mt-5">
+                <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow">
+                    Jan 18, 2026
                 </time>
 
                 <a href="#!" 
-                class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
-                onclick="document.getElementById('blog-modal-3').classList.remove('hidden')">
+                    class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
+                    onclick="document.getElementById('blog-modal-1').classList.remove('hidden')">
                     Read More
                 </a>
+                </div>
             </div>
-        </div>
-    </article>
+            </article>
 
-    <!-- Blog Modal -->
-    <div id="blog-modal-3" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-        <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
-            <!-- Close Button -->
-            <button onclick="document.getElementById('blog-modal-3').classList.add('hidden')" 
-                    class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
+                <!-- Blog Card -->
+            <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
+                <img 
+                    src="../assets/images/wlc5.png"
+                    alt="Romantic getaway in Pokhara near Phewa Lake – CrystalFall Hotel"
+                    class="w-full h-[300px] object-cover">
 
-            <!-- Modal Content -->
-            <h3 class="text-2xl font-gilda text-coyote mb-4">
-                Romantic Getaway in Pokhara: Perfect Stay for Couples
-            </h3>
-            
-            <time datetime="2026-01-24" class="text-xs text-gray-400 font-barlow mb-4 block">
-                Jan 24, 2026
-            </time>
+                <div class="p-6">
+                    <!-- Category -->
+                    <span class="text-xs uppercase tracking-widest text-lion font-barlow">
+                        Couples • Experience
+                    </span>
 
-            <p class="text-gray-700 text-sm mb-4">
-                Pokhara offers couples a dreamy escape with serene lake walks, romantic boat rides on Phewa Lake, 
-                and stunning sunsets over the Annapurna mountains. CrystalFall Hotel provides the perfect base 
-                for couples to enjoy comfort, luxury, and intimate experiences surrounded by nature.
-            </p>
+                    <!-- Blog Title -->
+                    <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
+                        Romantic Getaway in Pokhara: Perfect Stay for Couples
+                    </h3>
 
-            <p class="text-gray-700 text-sm mb-4">
-                Start your mornings with a peaceful lakeside stroll, enjoy cozy cafés, and capture unforgettable 
-                photographs of the scenic beauty. Evenings can be spent relaxing on the hotel balcony or exploring 
-                nearby romantic spots, creating memories that last a lifetime.
-            </p>
+                    <!-- Blog Snippet -->
+                    <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
+                        From serene lake walks to breathtaking mountain sunsets, discover why Pokhara is the ultimate 
+                        destination for couples seeking romance, relaxation, and unforgettable memories at CrystalFall Hotel.
+                    </p>
 
-            <p class="text-gray-700 text-sm">
-                Whether it’s celebrating a special occasion or simply escaping the everyday, Pokhara’s romantic 
-                charm combined with CrystalFall Hotel’s hospitality makes it the ultimate destination for couples 
-                seeking love, relaxation, and adventure.
-            </p>
-        </div>
-    </div>
+                    <!-- Date + Read More -->
+                    <div class="flex items-center justify-between mt-5">
+                        <time datetime="2026-01-24" class="text-xs text-gray-400 font-barlow">
+                            Jan 24, 2026
+                        </time>
 
-
-    <div id="blog-modal-1" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-    <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
-        <button onclick="document.getElementById('blog-modal-1').classList.add('hidden')" 
-            class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
-
-        <h3 class="text-2xl font-gilda text-coyote mb-4">
-        Best Hotels in Lakeside Pokhara: Peaceful Stay Near Lakeside
-        </h3>
-        
-        <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow mb-4 block">
-        Jan 18, 2026
-        </time>
-
-        <p class="text-gray-700 text-sm mb-4">
-        If you're looking for a calm escape, Pokhara’s Lakeside area offers tranquil mornings,
-        mirror-like reflections on Phewa Lake, and a slow-paced lifestyle perfect for relaxation.
-        </p>
-
-        <p class="text-gray-700 text-sm mb-4">
-        CrystalFall Hotel provides an ideal base for experiencing nature, nearby trails, and 
-        mountain views, blending luxury with serenity. Enjoy local cafés, scenic walks, and 
-        the beauty of the Himalayas in every moment.
-        </p>
-
-        <p class="text-gray-700 text-sm">
-        Travelers can indulge in wellness activities, explore cultural sites, or simply relax by 
-        the lake. This combination of calm surroundings and luxury accommodations ensures an 
-        unforgettable stay.
-        </p>
-    </div>
-    </div>
-
-    <!-- Blog Card -->
-        <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
-        <img 
-            src="../assets/images/blogs-1.png" 
-            alt="Calm side of Pokhara near Lakeside – CrystalFall Hotel"
-            class="w-full h-[300px] object-cover"
-        >
-
-        <div class="p-6">
-            <!-- Category -->
-            <span class="text-xs uppercase tracking-widest text-lion font-barlow">
-            Travel • Pokhara
-            </span>
-
-            <!-- Blog Title -->
-            <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
-            Calm Side of Pokhara You’ll Fall in Love With
-            </h3>
-
-            <!-- Blog Snippet -->
-            <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
-            Discover the peaceful side of Pokhara with serene lakeside mornings, stunning mountain views, 
-            and quiet spots perfect for travelers seeking relaxation and nature at its best.
-            </p>
-
-            <!-- Date + Read More -->
-            <div class="flex items-center justify-between mt-5">
-            <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow">
-                Jan 18, 2026
-            </time>
-
-            <a href="#!" 
-                class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
-                onclick="document.getElementById('blog-modal-1').classList.remove('hidden')">
-                Read More
-            </a>
-            </div>
-        </div>
-        </article>
-
-        <!-- Blog Modal -->
-        <div id="blog-modal-1" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-        <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
-            <!-- Close Button -->
-            <button onclick="document.getElementById('blog-modal-1').classList.add('hidden')" 
-                    class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
-
-            <!-- Modal Content -->
-            <h3 class="text-2xl font-gilda text-coyote mb-4">
-            Calm Side of Pokhara You’ll Fall in Love With
-            </h3>
-            
-            <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow mb-4 block">
-            Jan 18, 2026
-            </time>
-
-            <p class="text-gray-700 text-sm mb-4">
-            Explore the serene side of Pokhara near Lakeside, where mornings are calm, reflections on Phewa Lake 
-            create perfect photo opportunities, and mountain views offer a peaceful retreat from city life. 
-            CrystalFall Hotel provides the ideal base to enjoy nature, comfort, and luxury in one place.
-            </p>
-
-            <p class="text-gray-700 text-sm mb-4">
-            Stroll along the quiet lakeside paths, relax in scenic cafés, or simply enjoy the fresh mountain air. 
-            For travelers seeking a slow pace and calm surroundings, this side of Pokhara is a dream come true.
-            </p>
-
-            <p class="text-gray-700 text-sm">
-            Whether it’s for a solo escape, a romantic getaway, or a nature-focused adventure, this tranquil 
-            corner of Pokhara ensures a memorable stay, combining breathtaking landscapes with the comfort 
-            and hospitality of CrystalFall Hotel.
-            </p>
-        </div>
-        </div>
-
-   
-
-        <!-- Blog Card -->
-        <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
-        <img 
-            src="../assets/images/blogs-2.png" 
-            alt="Sunrise over Phewa Lake with Annapurna mountain reflections – CrystalFall Hotel" 
-            class="w-full h-[300px] object-cover"
-        >
-
-        <div class="p-6">
-            <!-- Category -->
-            <span class="text-xs uppercase tracking-widest text-lion font-barlow">
-            Nature • Experience
-            </span>
-
-            <!-- Blog Title -->
-            <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
-            Sunrise Over Phewa Lake: Magical Morning Views in Pokhara
-            </h3>
-
-            <!-- Blog Snippet -->
-            <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
-            Wake up to golden skies, misty waters, and the Annapurna reflections — a serene 
-            experience for travelers seeking peaceful mornings and breathtaking scenery from 
-            CrystalFall Hotel.
-            </p>
-
-            <!-- Date + Read More -->
-            <div class="flex items-center justify-between mt-5">
-            <time datetime="2026-01-10" class="text-xs text-gray-400 font-barlow">
-                Jan 10, 2026
-            </time>
-
-            <a href="#!" 
-                class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
-                onclick="document.getElementById('blog-modal-2').classList.remove('hidden')">
-                Read More
-            </a>
-            </div>
-        </div>
-        </article>
+                        <a href="#!" 
+                        class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
+                        onclick="document.getElementById('blog-modal-3').classList.remove('hidden')">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </article>
 
             <!-- Blog Modal -->
-            <div id="blog-modal-2" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-            <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
-                <!-- Close Button -->
-                <button onclick="document.getElementById('blog-modal-2').classList.add('hidden')" 
-                        class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
+            <div id="blog-modal-3" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
+                    <!-- Close Button -->
+                    <button onclick="document.getElementById('blog-modal-3').classList.add('hidden')" 
+                            class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
 
-                <!-- Modal Content -->
+                    <!-- Modal Content -->
+                    <h3 class="text-2xl font-gilda text-coyote mb-4">
+                        Romantic Getaway in Pokhara: Perfect Stay for Couples
+                    </h3>
+                    
+                    <time datetime="2026-01-24" class="text-xs text-gray-400 font-barlow mb-4 block">
+                        Jan 24, 2026
+                    </time>
+
+                    <p class="text-gray-700 text-sm mb-4">
+                        Pokhara offers couples a dreamy escape with serene lake walks, romantic boat rides on Phewa Lake, 
+                        and stunning sunsets over the Annapurna mountains. CrystalFall Hotel provides the perfect base 
+                        for couples to enjoy comfort, luxury, and intimate experiences surrounded by nature.
+                    </p>
+
+                    <p class="text-gray-700 text-sm mb-4">
+                        Start your mornings with a peaceful lakeside stroll, enjoy cozy cafés, and capture unforgettable 
+                        photographs of the scenic beauty. Evenings can be spent relaxing on the hotel balcony or exploring 
+                        nearby romantic spots, creating memories that last a lifetime.
+                    </p>
+
+                    <p class="text-gray-700 text-sm">
+                        Whether it’s celebrating a special occasion or simply escaping the everyday, Pokhara’s romantic 
+                        charm combined with CrystalFall Hotel’s hospitality makes it the ultimate destination for couples 
+                        seeking love, relaxation, and adventure.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="blog-modal-1" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+            <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
+                <button onclick="document.getElementById('blog-modal-1').classList.add('hidden')" 
+                    class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
+
                 <h3 class="text-2xl font-gilda text-coyote mb-4">
-                Sunrise Over Phewa Lake: Magical Morning Views in Pokhara
+                Best Hotels in Lakeside Pokhara: Peaceful Stay Near Lakeside
                 </h3>
                 
-                <time datetime="2026-01-10" class="text-xs text-gray-400 font-barlow mb-4 block">
-                Jan 10, 2026
+                <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow mb-4 block">
+                Jan 18, 2026
                 </time>
 
                 <p class="text-gray-700 text-sm mb-4">
-                Experience one of Pokhara’s most enchanting moments as the sun rises over Phewa Lake, 
-                painting the sky in shades of gold and pink while the Annapurna range reflects in the calm waters. 
-                CrystalFall Hotel provides the perfect vantage point for this magical scenery.
+                If you're looking for a calm escape, Pokhara’s Lakeside area offers tranquil mornings,
+                mirror-like reflections on Phewa Lake, and a slow-paced lifestyle perfect for relaxation.
                 </p>
 
                 <p class="text-gray-700 text-sm mb-4">
-                Early risers can enjoy serene walks along the lakeside, sip a warm cup of tea, and capture 
-                unforgettable photographs of the misty morning and mountain reflections. This peaceful 
-                start sets the tone for a day full of adventure and relaxation in Pokhara.
+                CrystalFall Hotel provides an ideal base for experiencing nature, nearby trails, and 
+                mountain views, blending luxury with serenity. Enjoy local cafés, scenic walks, and 
+                the beauty of the Himalayas in every moment.
                 </p>
 
                 <p class="text-gray-700 text-sm">
-                Whether you’re a nature lover, photographer, or simply seeking tranquility, witnessing the sunrise 
-                over Phewa Lake from CrystalFall Hotel is an experience that will stay in your memories forever.
+                Travelers can indulge in wellness activities, explore cultural sites, or simply relax by 
+                the lake. This combination of calm surroundings and luxury accommodations ensures an 
+                unforgettable stay.
                 </p>
             </div>
             </div>
 
+            <!-- Blog Card -->
+                <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
+                <img 
+                    src="../assets/images/blogs-1.png" 
+                    alt="Calm side of Pokhara near Lakeside – CrystalFall Hotel"
+                    class="w-full h-[300px] object-cover"
+                >
 
-    <!-- Blog Card -->
-    <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
-        <img 
-            src="../assets/images/blogs-3.png" 
-            alt="Living close to nature in Lakeside Pokhara – CrystalFall Hotel" 
-            class="w-full h-[300px] object-cover"
-        >
+                <div class="p-6">
+                    <!-- Category -->
+                    <span class="text-xs uppercase tracking-widest text-lion font-barlow">
+                    Travel • Pokhara
+                    </span>
 
-        <div class="p-6">
-            <!-- Category -->
-            <span class="text-xs uppercase tracking-widest text-lion font-barlow">
-                Hotel Life
-            </span>
+                    <!-- Blog Title -->
+                    <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
+                    Calm Side of Pokhara You’ll Fall in Love With
+                    </h3>
 
-            <!-- Blog Title -->
-            <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
-                Living Close to Nature in Lakeside Pokhara
-            </h3>
+                    <!-- Blog Snippet -->
+                    <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
+                    Discover the peaceful side of Pokhara with serene lakeside mornings, stunning mountain views, 
+                    and quiet spots perfect for travelers seeking relaxation and nature at its best.
+                    </p>
 
-            <!-- Blog Snippet -->
-            <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
-                Experience the perfect blend of luxury and nature with fresh mountain air, 
-                peaceful evenings, and stunning views at CrystalFall Hotel in Lakeside Pokhara.
-            </p>
+                    <!-- Date + Read More -->
+                    <div class="flex items-center justify-between mt-5">
+                    <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow">
+                        Jan 18, 2026
+                    </time>
 
-            <!-- Date + Read More -->
-            <div class="flex items-center justify-between mt-5">
-                <time datetime="2025-12-28" class="text-xs text-gray-400 font-barlow">
-                    Dec 28, 2025
-                </time>
+                    <a href="#!" 
+                        class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
+                        onclick="document.getElementById('blog-modal-1').classList.remove('hidden')">
+                        Read More
+                    </a>
+                    </div>
+                </div>
+                </article>
 
-                <a href="#!" 
-                class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
-                onclick="document.getElementById('blog-modal-5').classList.remove('hidden')">
-                    Read More
-                </a>
+                <!-- Blog Modal -->
+                <div id="blog-modal-1" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
+                    <!-- Close Button -->
+                    <button onclick="document.getElementById('blog-modal-1').classList.add('hidden')" 
+                            class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
+
+                    <!-- Modal Content -->
+                    <h3 class="text-2xl font-gilda text-coyote mb-4">
+                    Calm Side of Pokhara You’ll Fall in Love With
+                    </h3>
+                    
+                    <time datetime="2026-01-18" class="text-xs text-gray-400 font-barlow mb-4 block">
+                    Jan 18, 2026
+                    </time>
+
+                    <p class="text-gray-700 text-sm mb-4">
+                    Explore the serene side of Pokhara near Lakeside, where mornings are calm, reflections on Phewa Lake 
+                    create perfect photo opportunities, and mountain views offer a peaceful retreat from city life. 
+                    CrystalFall Hotel provides the ideal base to enjoy nature, comfort, and luxury in one place.
+                    </p>
+
+                    <p class="text-gray-700 text-sm mb-4">
+                    Stroll along the quiet lakeside paths, relax in scenic cafés, or simply enjoy the fresh mountain air. 
+                    For travelers seeking a slow pace and calm surroundings, this side of Pokhara is a dream come true.
+                    </p>
+
+                    <p class="text-gray-700 text-sm">
+                    Whether it’s for a solo escape, a romantic getaway, or a nature-focused adventure, this tranquil 
+                    corner of Pokhara ensures a memorable stay, combining breathtaking landscapes with the comfort 
+                    and hospitality of CrystalFall Hotel.
+                    </p>
+                </div>
+                </div>
+
+        
+
+                <!-- Blog Card -->
+                <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
+                <img 
+                    src="../assets/images/blogs-2.png" 
+                    alt="Sunrise over Phewa Lake with Annapurna mountain reflections – CrystalFall Hotel" 
+                    class="w-full h-[300px] object-cover"
+                >
+
+                <div class="p-6">
+                    <!-- Category -->
+                    <span class="text-xs uppercase tracking-widest text-lion font-barlow">
+                    Nature • Experience
+                    </span>
+
+                    <!-- Blog Title -->
+                    <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
+                    Sunrise Over Phewa Lake: Magical Morning Views in Pokhara
+                    </h3>
+
+                    <!-- Blog Snippet -->
+                    <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
+                    Wake up to golden skies, misty waters, and the Annapurna reflections — a serene 
+                    experience for travelers seeking peaceful mornings and breathtaking scenery from 
+                    CrystalFall Hotel.
+                    </p>
+
+                    <!-- Date + Read More -->
+                    <div class="flex items-center justify-between mt-5">
+                    <time datetime="2026-01-10" class="text-xs text-gray-400 font-barlow">
+                        Jan 10, 2026
+                    </time>
+
+                    <a href="#!" 
+                        class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
+                        onclick="document.getElementById('blog-modal-2').classList.remove('hidden')">
+                        Read More
+                    </a>
+                    </div>
+                </div>
+                </article>
+
+                    <!-- Blog Modal -->
+                    <div id="blog-modal-2" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                    <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
+                        <!-- Close Button -->
+                        <button onclick="document.getElementById('blog-modal-2').classList.add('hidden')" 
+                                class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
+
+                        <!-- Modal Content -->
+                        <h3 class="text-2xl font-gilda text-coyote mb-4">
+                        Sunrise Over Phewa Lake: Magical Morning Views in Pokhara
+                        </h3>
+                        
+                        <time datetime="2026-01-10" class="text-xs text-gray-400 font-barlow mb-4 block">
+                        Jan 10, 2026
+                        </time>
+
+                        <p class="text-gray-700 text-sm mb-4">
+                        Experience one of Pokhara’s most enchanting moments as the sun rises over Phewa Lake, 
+                        painting the sky in shades of gold and pink while the Annapurna range reflects in the calm waters. 
+                        CrystalFall Hotel provides the perfect vantage point for this magical scenery.
+                        </p>
+
+                        <p class="text-gray-700 text-sm mb-4">
+                        Early risers can enjoy serene walks along the lakeside, sip a warm cup of tea, and capture 
+                        unforgettable photographs of the misty morning and mountain reflections. This peaceful 
+                        start sets the tone for a day full of adventure and relaxation in Pokhara.
+                        </p>
+
+                        <p class="text-gray-700 text-sm">
+                        Whether you’re a nature lover, photographer, or simply seeking tranquility, witnessing the sunrise 
+                        over Phewa Lake from CrystalFall Hotel is an experience that will stay in your memories forever.
+                        </p>
+                    </div>
+                    </div>
+
+
+            <!-- Blog Card -->
+            <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
+                <img 
+                    src="../assets/images/blogs-3.png" 
+                    alt="Living close to nature in Lakeside Pokhara – CrystalFall Hotel" 
+                    class="w-full h-[300px] object-cover"
+                >
+
+                <div class="p-6">
+                    <!-- Category -->
+                    <span class="text-xs uppercase tracking-widest text-lion font-barlow">
+                        Hotel Life
+                    </span>
+
+                    <!-- Blog Title -->
+                    <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
+                        Living Close to Nature in Lakeside Pokhara
+                    </h3>
+
+                    <!-- Blog Snippet -->
+                    <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
+                        Experience the perfect blend of luxury and nature with fresh mountain air, 
+                        peaceful evenings, and stunning views at CrystalFall Hotel in Lakeside Pokhara.
+                    </p>
+
+                    <!-- Date + Read More -->
+                    <div class="flex items-center justify-between mt-5">
+                        <time datetime="2025-12-28" class="text-xs text-gray-400 font-barlow">
+                            Dec 28, 2025
+                        </time>
+
+                        <a href="#!" 
+                        class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
+                        onclick="document.getElementById('blog-modal-5').classList.remove('hidden')">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Modal -->
+            <div id="blog-modal-5" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
+                    <!-- Close Button -->
+                    <button onclick="document.getElementById('blog-modal-5').classList.add('hidden')" 
+                            class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
+
+                    <!-- Modal Content -->
+                    <h3 class="text-2xl font-gilda text-coyote mb-4">
+                        Living Close to Nature in Lakeside Pokhara
+                    </h3>
+                    
+                    <time datetime="2025-12-28" class="text-xs text-gray-400 font-barlow mb-4 block">
+                        Dec 28, 2025
+                    </time>
+
+                    <p class="text-gray-700 text-sm mb-4">
+                        CrystalFall Hotel offers travelers a unique experience where luxury meets nature. 
+                        Located in Lakeside Pokhara, the hotel provides fresh mountain air, peaceful surroundings, 
+                        and stunning views of the Annapurna range.
+                    </p>
+
+                    <p class="text-gray-700 text-sm mb-4">
+                        Guests can enjoy quiet mornings by the lake, take scenic walks, and explore the natural 
+                        beauty of Pokhara while staying in comfort. The blend of serene landscapes and modern 
+                        amenities ensures an unforgettable stay.
+                    </p>
+
+                    <p class="text-gray-700 text-sm">
+                        Whether you’re seeking a relaxing retreat or a base for outdoor adventures, living close 
+                        to nature at CrystalFall Hotel provides the perfect balance of tranquility, luxury, 
+                        and Himalayan beauty.
+                    </p>
+                </div>
             </div>
-        </div>
-    </article>
 
-    <!-- Blog Modal -->
-    <div id="blog-modal-5" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-        <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
-            <!-- Close Button -->
-            <button onclick="document.getElementById('blog-modal-5').classList.add('hidden')" 
-                    class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
+                <!-- Blog Card -->
+                <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
+                <img 
+                    src="../assets/images/wlc10.jpg"
+                    alt="Best time to visit Pokhara for clear mountain views – CrystalFall Hotel"
+                    class="w-full h-[300px] object-cover">
 
-            <!-- Modal Content -->
-            <h3 class="text-2xl font-gilda text-coyote mb-4">
-                Living Close to Nature in Lakeside Pokhara
-            </h3>
-            
-            <time datetime="2025-12-28" class="text-xs text-gray-400 font-barlow mb-4 block">
-                Dec 28, 2025
-            </time>
+                <div class="p-6">
+                    <!-- Category -->
+                    <span class="text-xs uppercase tracking-widest text-lion font-barlow">
+                        Travel Guide • Pokhara
+                    </span>
 
-            <p class="text-gray-700 text-sm mb-4">
-                CrystalFall Hotel offers travelers a unique experience where luxury meets nature. 
-                Located in Lakeside Pokhara, the hotel provides fresh mountain air, peaceful surroundings, 
-                and stunning views of the Annapurna range.
-            </p>
+                    <!-- Blog Title -->
+                    <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
+                        Best Time to Visit Pokhara for Clear Mountain Views
+                    </h3>
 
-            <p class="text-gray-700 text-sm mb-4">
-                Guests can enjoy quiet mornings by the lake, take scenic walks, and explore the natural 
-                beauty of Pokhara while staying in comfort. The blend of serene landscapes and modern 
-                amenities ensures an unforgettable stay.
-            </p>
+                    <!-- Blog Snippet -->
+                    <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
+                        Planning a trip to Pokhara? Discover the ideal seasons for clear skies, breathtaking Annapurna views, 
+                        and a peaceful lakeside stay at CrystalFall Hotel.
+                    </p>
 
-            <p class="text-gray-700 text-sm">
-                Whether you’re seeking a relaxing retreat or a base for outdoor adventures, living close 
-                to nature at CrystalFall Hotel provides the perfect balance of tranquility, luxury, 
-                and Himalayan beauty.
-            </p>
-        </div>
-    </div>
+                    <!-- Date + Read More -->
+                    <div class="flex items-center justify-between mt-5">
+                        <time datetime="2026-01-22" class="text-xs text-gray-400 font-barlow">
+                            Jan 22, 2026
+                        </time>
 
-        <!-- Blog Card -->
-        <article class="bg-white rounded-md overflow-hidden shadow-lg hover:-translate-y-3 transition duration-300">
-        <img 
-            src="../assets/images/wlc10.jpg"
-            alt="Best time to visit Pokhara for clear mountain views – CrystalFall Hotel"
-            class="w-full h-[300px] object-cover">
+                        <a href="#!" 
+                        class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
+                        onclick="document.getElementById('blog-modal-4').classList.remove('hidden')">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-        <div class="p-6">
-            <!-- Category -->
-            <span class="text-xs uppercase tracking-widest text-lion font-barlow">
-                Travel Guide • Pokhara
-            </span>
+            <!-- Blog Modal -->
+            <div id="blog-modal-4" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
+                    <!-- Close Button -->
+                    <button onclick="document.getElementById('blog-modal-4').classList.add('hidden')" 
+                            class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
 
-            <!-- Blog Title -->
-            <h3 class="font-gilda text-xl text-coyote mt-3 leading-snug">
-                Best Time to Visit Pokhara for Clear Mountain Views
-            </h3>
+                    <!-- Modal Content -->
+                    <h3 class="text-2xl font-gilda text-coyote mb-4">
+                        Best Time to Visit Pokhara for Clear Mountain Views
+                    </h3>
+                    
+                    <time datetime="2026-01-22" class="text-xs text-gray-400 font-barlow mb-4 block">
+                        Jan 22, 2026
+                    </time>
 
-            <!-- Blog Snippet -->
-            <p class="font-barlow text-sm text-gray-600 mt-3 leading-6">
-                Planning a trip to Pokhara? Discover the ideal seasons for clear skies, breathtaking Annapurna views, 
-                and a peaceful lakeside stay at CrystalFall Hotel.
-            </p>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Pokhara is a paradise for travelers seeking stunning mountain views, tranquil lakes, and peaceful escapes. 
+                        The best time to visit is during the autumn (September to November) or spring (March to May), when skies 
+                        are clear and the Annapurna range is fully visible.
+                    </p>
 
-            <!-- Date + Read More -->
-            <div class="flex items-center justify-between mt-5">
-                <time datetime="2026-01-22" class="text-xs text-gray-400 font-barlow">
-                    Jan 22, 2026
-                </time>
+                    <p class="text-gray-700 text-sm mb-4">
+                        CrystalFall Hotel offers a perfect base to enjoy these breathtaking views. From lakeside strolls to 
+                        morning hikes and sunrise photography, every day presents new opportunities to connect with nature.
+                    </p>
 
-                <a href="#!" 
-                class="text-lion uppercase text-xs tracking-widest font-barlow hover:underline"
-                onclick="document.getElementById('blog-modal-4').classList.remove('hidden')">
-                    Read More
-                </a>
+                    <p class="text-gray-700 text-sm">
+                        Avoid the monsoon months if you want clear visibility, and plan your stay to make the most of the calm 
+                        surroundings, fresh mountain air, and serene ambiance that Pokhara provides. Whether for relaxation, 
+                        adventure, or photography, timing your visit correctly ensures an unforgettable experience.
+                    </p>
+                </div>
             </div>
+
+            </div>
+
         </div>
-    </article>
-
-    <!-- Blog Modal -->
-    <div id="blog-modal-4" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-        <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
-            <!-- Close Button -->
-            <button onclick="document.getElementById('blog-modal-4').classList.add('hidden')" 
-                    class="absolute top-3 right-3 text-gray-500 text-xl font-bold">×</button>
-
-            <!-- Modal Content -->
-            <h3 class="text-2xl font-gilda text-coyote mb-4">
-                Best Time to Visit Pokhara for Clear Mountain Views
-            </h3>
-            
-            <time datetime="2026-01-22" class="text-xs text-gray-400 font-barlow mb-4 block">
-                Jan 22, 2026
-            </time>
-
-            <p class="text-gray-700 text-sm mb-4">
-                Pokhara is a paradise for travelers seeking stunning mountain views, tranquil lakes, and peaceful escapes. 
-                The best time to visit is during the autumn (September to November) or spring (March to May), when skies 
-                are clear and the Annapurna range is fully visible.
-            </p>
-
-            <p class="text-gray-700 text-sm mb-4">
-                CrystalFall Hotel offers a perfect base to enjoy these breathtaking views. From lakeside strolls to 
-                morning hikes and sunrise photography, every day presents new opportunities to connect with nature.
-            </p>
-
-            <p class="text-gray-700 text-sm">
-                Avoid the monsoon months if you want clear visibility, and plan your stay to make the most of the calm 
-                surroundings, fresh mountain air, and serene ambiance that Pokhara provides. Whether for relaxation, 
-                adventure, or photography, timing your visit correctly ensures an unforgettable experience.
-            </p>
-        </div>
-    </div>
-
-    </div>
-
-  </div>
-</section>
+        </section>
 
 
 
@@ -1383,6 +1433,147 @@
                 </div>
             </div>
         </section>
+
+
+<section class="py-16 px-3 bg-brown mb-24">
+    <div class="container max-w-[1200px] mx-auto">
+        <h2 class = "font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-coyote text-center mb-3">What Our Happy Client Says</h2>
+        <div class="flex items-center justify-center mb-12">
+            <img src = "../assets/images/decorated-pattern-2.svg" alt = "">
+        </div>
+
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+    <script type="application/json" class="swiper-config">
+    {
+    "loop": true,
+    "speed": 600,
+    "autoplay": { "delay": 5000 },
+
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+
+    "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+    },
+
+    "breakpoints": {
+        "768": {
+        "slidesPerView": 2
+        },
+        "1024": {
+        "slidesPerView": 3
+        }
+    }
+    }
+    </script>
+    
+<div class="swiper-wrapper"> 
+<!-- Review 1 --> 
+    <div class="swiper-slide"> 
+    <div class="bg-[#1b1b1b] p-8 rounded-xl text-white h-full"> 
+    <div class="flex items-center gap-3 mb-4"> 
+    <i class="bi bi-person-circle text-4xl text-white"></i> 
+    <div> 
+        <h4 class="font-semibold text-white">Sumit Singla</h4> 
+        <div class="text-yellow-400">★★★★★</div> 
+    </div> 
+    </div> 
+    <p class="text-sm text-white leading-relaxed"> 
+    I had a pleasant stay at Hotel Crystal Fall, Pokhara. The rooms are managed well, with centrally distributed hot water and good bathroom consumables. Boarding service and food quality are satisfying, especially for vegetarians.
+    There’s no room AC, only a fan – but honestly, there’s no real need for AC in this climate, so it works fine. Keep it up!</p> 
+    </div> 
+    </div> 
+
+<!-- Review 2 --> 
+ <div class="swiper-slide"> 
+    <div class="bg-[#1b1b1b] p-8 rounded-xl text-white h-full"> 
+        <div class="flex items-center gap-3 mb-4"> 
+            <i class="bi bi-person-circle text-4xl text-white"></i> 
+        <div> 
+        <h4 class="font-semibold text-white">Jeganathan Chellamaraja</h4> 
+        <div class="text-yellow-400">★★★★★</div> 
+        </div> 
+        </div> 
+        <p class="text-sm text-white leading-relaxed"> 
+            Rooms are managed well. Centrally distributed hot water and bathroom 
+            consumables are good. There's no room service, but that's not our problem. 
+            Boarding service and food quality is good for vegetarians. One thing. 
+            Communication skills in English is also essential for hotel industry people 
+            to manage non-Hindi speakers. Keep it up. Good experience. No more complaints.
+        </p> 
+    </div> 
+</div> 
+
+<!-- Review 3 --> 
+ <div class="swiper-slide"> 
+    <div class="bg-[#1b1b1b] p-8 rounded-xl text-white h-full"> 
+    <div class="flex items-center gap-3 mb-4"> 
+        <i class="bi bi-person-circle text-4xl text-white"></i> 
+    <div> 
+        <h4 class="font-semibold text-white">prince_A1_Advisor</h4> 
+    <div class="text-yellow-400">★★★★★</div> 
+    </div> 
+</div> 
+<p class="text-sm text-white leading-relaxed"> 
+    Hotel Crystal Falls is a hidden gem in Pokhara, offering a peaceful retreat with 
+    breathtaking mountain and lake views. The rooms are clean, spacious, and well-equipped 
+    with modern amenities. The staff is incredibly friendly and goes above and beyond to 
+    ensure a comfortable stay. The food is delicious, with a variety of local and international 
+    options. 
+</p> 
+</div> 
+</div> 
+
+<!-- Review 4 --> 
+ <div class="swiper-slide"> 
+    <div class="bg-[#1b1b1b] p-8 rounded-xl text-white h-full"> 
+    <div class="flex items-center gap-3 mb-4"> 
+        <i class="bi bi-person-circle text-4xl text-white"></i> 
+    <div> 
+        <h4 class="font-semibold text-white">Manish Upadhyay</h4> 
+    <div class="text-yellow-400">★★★★★</div> 
+    </div> 
+</div> 
+<p class="text-sm text-white leading-relaxed"> 
+    One of the Nice hotels.
+    The bathroom was clean and all the toiletries and towels were given.
+    The location is opposite to fewa Lake.
+    It's in street no. 2
+    Food was also available.
+    They have RO water in their dining area.
+    You can fill your bottles.
+    A parking facility is also there . nice view from hotel but not from every room.
+    Opt room before booking.
+    You can go terrace for surrounding views.
+</p> 
+</div> 
+</div> 
+
+<!-- Review 5 --> 
+<div class="swiper-slide"> 
+    <div class="bg-[#1b1b1b] p-8 rounded-xl text-white h-full"> 
+    <div class="flex items-center gap-3 mb-4"> 
+        <i class="bi bi-person-circle text-4xl text-white"></i> 
+    <div> 
+        <h4 class="font-semibold text-white">Kushal Mishra</h4> 
+    <div class="text-yellow-400">★★★★★</div> 
+    </div> 
+</div> 
+<p class="text-sm text-white leading-relaxed"> 
+    This place is at pokhara. A well budget hotel to stay and the cleanliness there was just awesome. Food quality was great. There atmosphere was too good. Staff behavior was very friendly and other customer were also satisfied. In morning the view looks so cool and mesmerizing that i am not getting over it
+    The room service was great. It cost me 1000 IC for non AC and just 1200 for AC room.
+</p> 
+</div> 
+</div> 
+
+  </div>
+  </div>
+
+    </section>
 
         <script>
             const slider = document.getElementById('slider');
@@ -1570,6 +1761,17 @@
         <!-- slick slide js -->
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    </body>
+    <script>
+    document.querySelectorAll('.init-swiper').forEach(function(swiperElement) {
+
+    const configElement = swiperElement.querySelector('.swiper-config');
+    const config = JSON.parse(configElement.innerHTML);
+
+    new Swiper(swiperElement, config);
+
+    });
+    </script>    
+</body>
 </html>
