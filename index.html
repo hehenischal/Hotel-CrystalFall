@@ -304,9 +304,9 @@
 
         <div class="col-12">
           <select id="roomMobile" class="form-select w-100 h-100 booking-control">
-            <option value="5000" data-room="Executive Suite">Executive Suite</option>
-            <option value="6000" data-room="Premium Garden Suite">Premium Garden Suite</option>
-            <option value="8000" data-room="Deluxe Mountain View">Deluxe Mountain View</option>
+            <option value="1500" data-room="Singe Bed">Single Bed</option>
+            <option value="2000" data-room="Double Bed">Double Bed</option>
+            <option value="3000" data-room="Triple Bed">Triple Bed</option>
           </select>
         </div>
 
@@ -358,9 +358,9 @@
 
     <div class="col-sm-6 col-lg-2 d-none d-sm-block">
       <select id="roomDesktop" class="form-select w-100 h-100 booking-control">
-        <option value="5000" data-room="Executive Suite">Executive Suite</option>
-        <option value="6000" data-room="Premium Garden Suite">Premium Garden Suite</option>
-        <option value="8000" data-room="Deluxe Mountain View">Deluxe Mountain View</option>
+        <option value="1500" data-room="Single Bed">Single Bed</option>
+        <option value="2000" data-room="Double Bed">Double Bed</option>
+        <option value="3000" data-room="Triple Bed">Triple Bed</option>
       </select>
     </div>
 
@@ -389,7 +389,7 @@
 
               <div>
                 <h4 id="roomName" style="font-family:'Gilda Display', serif; color:#111; margin-bottom:6px;">
-                  Executive Suite
+                  Single Bed
                 </h4>
 
                 <p style="font-size:.9rem; color:#6b7280; margin-bottom:8px;">
@@ -413,7 +413,7 @@
 
             <div class="d-flex justify-content-between mb-1">
               <span>Price per night</span>
-              <span id="priceNight">NPR 5000</span>
+              <span id="priceNight">NPR 1500</span>
             </div>
 
             <div class="d-flex justify-content-between mb-1">
@@ -425,7 +425,7 @@
 
             <div class="d-flex justify-content-between fw-semibold">
               <span>Total</span>
-              <span id="totalAmount">NPR 5000</span>
+              <span id="totalAmount">NPR 1500</span>
             </div>
 
             <button
@@ -449,16 +449,16 @@
   </div>
 <script>
   const rooms = {
-    "Executive Suite": {
-      price: 5000,
+    "Single Bed": {
+      price: 1500,
       image: "./assets/images/wlc2.png"
     },
-    "Premium Garden Suite": {
-      price: 6000,
+    "Double Bed": {
+      price: 2000,
       image: "./assets/images/wlc5.png"
     },
-    "Deluxe Mountain View": {
-      price: 8000,
+    "Triple Bed": {
+      price: 3000,
       image: "./assets/images/bed.jpg"
     }
   };
@@ -787,18 +787,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="row g-4">
 
-  <!-- Executive Suite -->
+  <!-- Single Bed -->
   <div class="col-12 col-md-4 reveal from-up delay-1 shadow room-card" onclick="toggleRoom(this)">
     <div class="position-relative bg-white overflow-hidden shadow" style="border-radius:1rem;">
       <img
         src="./assets/images/wlc2.png"
-        alt="Executive Suite"
+        alt="Single Bed"
         class="w-100"
         style="height:360px; object-fit:cover;"/>
 
       <div class="p-4">
         <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
-          Executive Suite
+          Single Bed
         </h3>
 
         <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
@@ -864,18 +864,18 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 
-  <!-- Premium Garden Suite -->
+  <!-- Double Bed -->
   <div class="col-12 col-md-4 reveal from-up delay-2 shadow room-card" onclick="toggleRoom(this)">
     <div class="position-relative bg-white overflow-hidden shadow room-card" style="border-radius:1rem;">
       <img
         src="./assets/images/wlc5.png"
-        alt="Premium Garden Suite"
+        alt="Double Bed"
         class="w-100"
         style="height:360px; object-fit:cover;"/>
 
       <div class="p-4">
         <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
-          Premium Garden Suite
+          Double Bed
         </h3>
 
         <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
@@ -940,18 +940,18 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 
-  <!-- Deluxe Mountain View -->
+  <!-- Triple Bed -->
   <div class="col-12 col-md-4 reveal from-up delay-3 shadow room-card" onclick="toggleRoom(this)">
     <div class="position-relative bg-white overflow-hidden shadow room-card" style="border-radius:1rem;">
       <img
         src="./assets/images/bed.jpg"
-        alt="Deluxe Mountain View"
+        alt="Triple Bed"
         class="w-100"
         style="height:360px; object-fit:cover;"/>
 
       <div class="p-4">
         <h3 class="mb-2" style="font-size:1.25rem; font-weight:600; color:#111;">
-          Deluxe Mountain View
+          Triple Bed
         </h3>
 
         <p class="mb-3" style="font-size:.875rem; color:#6b7280; line-height:1.6;">
